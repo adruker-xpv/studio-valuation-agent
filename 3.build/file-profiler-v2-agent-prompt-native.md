@@ -1,11 +1,12 @@
-**Description**
-Profiles one attached valuation-related file by inspecting the actual file with code.
+---
+name: file-profiler
+description: |-
+  Profiles one attached valuation-related file by inspecting the actual file with code.
 
-Use for new files that the File Register has classified as requiring profiling. The skill inventories all workbook sheets, including hidden sheets, then deeply inspects only valuation-relevant sheets. It returns factual observations about file role, structure, periods, entities, currencies, units, labels, formulas, and structural indicators.
+  Use for new files that the File Register has classified as requiring profiling. The skill inventories all workbook sheets, including hidden sheets, then deeply inspects only valuation-relevant sheets. It returns factual observations about file role, structure, periods, entities, currencies, units, labels, formulas, and structural indicators.
 
-It does not create schemas, determine durable valuation methodology, assign evidence confidence, calculate a valuation, or approve interpretations.
-
-**Instructions**
+  It does not create schemas, determine durable valuation methodology, assign evidence confidence, calculate a valuation, or approve interpretations.
+---
 # File Profiler
 
 ## Purpose
