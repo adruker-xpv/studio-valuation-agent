@@ -1,0 +1,194 @@
+{
+ "version": "1.0",
+ "notes": "Generic XPV concept library. Synonyms are matched after normalisation (lowercase, '&' -> 'and', punctuation removed, a leading 'total' removed). Exact matches beat contains-matches. kind: flow = summed over the LTM window; balance = value at the period end. cost: the magnitude is used (ABS) because statements store costs with either sign.",
+ "concepts": [
+  {
+   "id": "revenue",
+   "name": "Revenue",
+   "kind": "flow",
+   "cost": false,
+   "synonyms": [
+    "revenue",
+    "revenues",
+    "net revenue",
+    "net revenues",
+    "sales",
+    "net sales",
+    "turnover",
+    "operating revenue",
+    "total revenues"
+   ]
+  },
+  {
+   "id": "cogs",
+   "name": "Cost of goods sold",
+   "kind": "flow",
+   "cost": true,
+   "synonyms": [
+    "cost of goods sold",
+    "cogs",
+    "cost of sales",
+    "cost of revenue",
+    "cost of revenues",
+    "direct costs"
+   ]
+  },
+  {
+   "id": "opex",
+   "name": "Operating expenses (excl. COGS, D&A)",
+   "kind": "flow",
+   "cost": true,
+   "synonyms": [
+    "sga",
+    "sganda",
+    "sgna",
+    "sg and a",
+    "sga expense",
+    "sganda expense",
+    "selling general and administrative",
+    "selling general and administrative expenses",
+    "operating expenses",
+    "opex",
+    "overheads",
+    "general and administrative",
+    "g and a",
+    "sg and a expense",
+    "sg and a expenses",
+    "sg and a"
+   ]
+  },
+  {
+   "id": "ebitda",
+   "name": "EBITDA",
+   "kind": "flow",
+   "cost": false,
+   "synonyms": [
+    "ebitda",
+    "reported ebitda"
+   ]
+  },
+  {
+   "id": "adjusted_ebitda",
+   "name": "Adjusted EBITDA",
+   "kind": "flow",
+   "cost": false,
+   "synonyms": [
+    "adjusted ebitda",
+    "adj ebitda",
+    "normalised ebitda",
+    "normalized ebitda"
+   ]
+  },
+  {
+   "id": "da",
+   "name": "Depreciation and amortization",
+   "kind": "flow",
+   "cost": true,
+   "synonyms": [
+    "depreciation and amortization",
+    "depreciation and amortisation",
+    "d and a",
+    "depreciation",
+    "amortization and depreciation"
+   ]
+  },
+  {
+   "id": "ebit",
+   "name": "Operating income (EBIT)",
+   "kind": "flow",
+   "cost": false,
+   "synonyms": [
+    "operating income",
+    "operating profit",
+    "ebit",
+    "income from operations",
+    "operating income loss"
+   ]
+  },
+  {
+   "id": "cash",
+   "name": "Cash and cash equivalents",
+   "kind": "balance",
+   "cost": true,
+   "synonyms": [
+    "cash and cash equivalents",
+    "cash",
+    "cash and equivalents",
+    "cash at bank"
+   ]
+  },
+  {
+   "id": "debt",
+   "name": "Total debt",
+   "kind": "balance",
+   "cost": true,
+   "synonyms": [
+    "total debt",
+    "debt",
+    "borrowings",
+    "loans and borrowings",
+    "bank debt",
+    "term loan",
+    "term loans",
+    "long term debt",
+    "notes payable",
+    "credit facility",
+    "revolver",
+    "revolving credit facility",
+    "bank loan",
+    "bank loans",
+    "loans",
+    "loan",
+    "long term borrowings",
+    "short term borrowings",
+    "current portion of long term debt",
+    "shareholder loans"
+   ]
+  },
+  {
+   "id": "net_debt",
+   "name": "Net debt",
+   "kind": "balance",
+   "cost": false,
+   "synonyms": [
+    "net debt",
+    "net debt cash",
+    "net borrowings"
+   ]
+  }
+ ],
+ "ebitda_derivation_order": [
+  [
+   "adjusted_ebitda"
+  ],
+  [
+   "ebitda"
+  ],
+  [
+   "ebit",
+   "da"
+  ],
+  [
+   "revenue",
+   "cogs",
+   "opex"
+  ]
+ ],
+ "sheet_hints": {
+  "flow": [
+   "income",
+   "p and l",
+   "pl",
+   "profit",
+   "loss",
+   "operations",
+   "is"
+  ],
+  "balance": [
+   "balance",
+   "bs",
+   "financial position",
+   "position"
+  ]
+ }
+}

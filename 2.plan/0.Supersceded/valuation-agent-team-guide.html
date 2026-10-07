@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valuation Agent — where to start</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2a35; --muted:#5a6873; --line:#d9e0e5; --panel:#f3f6f8; --page:#ffffff;
+    --a:#2e6f95; --a-t:#e6f0f6;   /* set up a company */
+    --b:#23877b; --b-t:#e3f3f0;   /* monthly file */
+    --c:#6d55a3; --c-t:#efebf7;   /* quarter prep */
+    --d:#b8691f; --d-t:#f9eee2;   /* review & finalize */
+    --e:#3d7a37; --e-t:#e8f3e6;   /* LP report data */
+    --f:#5e6b75; --f-t:#eef1f3;   /* quick asks */
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--page);color:var(--ink);
+    font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:16px;line-height:1.5}
+  a{color:inherit}
+  :focus-visible{outline:3px solid #1c2a35;outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1120px;margin:0 auto;padding:40px 24px 64px}
+
+  header h1{font-size:40px;line-height:1.1;letter-spacing:-.02em;font-weight:800;margin:0 0 10px}
+  header p{margin:0;max-width:62ch;color:var(--muted);font-size:18px}
+
+  /* lifecycle strip */
+  .life{display:flex;gap:6px;margin:28px 0 0;flex-wrap:wrap}
+  .life a{flex:1 1 140px;text-decoration:none;padding:10px 12px;border-radius:6px;
+    font-weight:600;font-size:14px;color:#fff;position:relative}
+  .life a small{display:block;font-weight:400;opacity:.9;font-size:12.5px}
+  .life .la{background:var(--a)} .life .lb{background:var(--b)} .life .lc{background:var(--c)}
+  .life .ld{background:var(--d)} .life .le{background:var(--e)}
+
+  /* decision tree */
+  .tree{margin:44px 0 12px;padding:28px;background:var(--panel);border-radius:14px}
+  .tree h2{margin:0 0 20px;font-size:22px;letter-spacing:-.01em}
+  .q{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:10px;
+    padding:10px 16px;font-weight:700}
+  .branch{display:grid;grid-template-columns:auto 1fr;gap:0 18px;margin-top:14px}
+  .yn{font-weight:700;font-size:14px;color:var(--muted);padding-top:12px;text-align:right;min-width:34px}
+  .opts{display:flex;flex-wrap:wrap;gap:10px;padding:0 0 0 18px;border-left:2px solid var(--line)}
+  .opt{display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;
+    min-width:180px;flex:1 1 180px;padding:12px 14px;border-radius:10px;border:2px solid;
+    background:#fff;transition:transform .12s ease}
+  .opt:hover{transform:translateY(-2px)}
+  @media (prefers-reduced-motion:reduce){.opt{transition:none}.opt:hover{transform:none}}
+  .opt span{font-size:14px;color:var(--muted)}
+  .opt b{font-size:16px;margin-top:6px}
+  .oa{border-color:var(--a)} .oa b{color:var(--a)}
+  .ob{border-color:var(--b)} .ob b{color:var(--b)}
+  .oc{border-color:var(--c)} .oc b{color:var(--c)}
+  .od{border-color:var(--d)} .od b{color:var(--d)}
+  .oe{border-color:var(--e)} .oe b{color:var(--e)}
+  .of{border-color:var(--f)} .of b{color:var(--f)}
+  .sub{margin-top:16px}
+
+  /* key */
+  .key{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 0;font-size:14px;color:var(--muted)}
+  .key div{display:flex;align-items:center;gap:6px}
+
+  /* action chips */
+  .chip{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;
+    padding:2px 9px;border-radius:999px;border:1.5px solid var(--ink);background:#fff;white-space:nowrap}
+  .chip.attach{background:var(--ink);color:#fff}
+  .chip.type{border-style:solid}
+  .chip.agent{border-color:var(--line);color:var(--muted);background:var(--panel)}
+  .chip.decide{border-radius:4px}
+  .chip.excel{border-style:double;border-width:3px}
+  .chip.soon{border-style:dashed;color:var(--muted)}
+
+  /* routes */
+  .route{margin-top:48px;scroll-margin-top:16px}
+  .rhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+    padding:0 0 12px;border-bottom:3px solid var(--rc)}
+  .rhead .tag{width:34px;height:34px;border-radius:8px;background:var(--rc);color:#fff;
+    display:grid;place-items:center;font-weight:800;flex:none;align-self:center}
+  .rhead h2{margin:0;font-size:26px;letter-spacing:-.01em;color:var(--rc)}
+  .rhead p{margin:0;color:var(--muted)}
+  .rbody{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;margin-top:20px}
+  @media (max-width:820px){.rbody{grid-template-columns:1fr}}
+
+  ol.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+  ol.steps>li{counter-increment:s;position:relative;padding:0 0 18px 48px}
+  ol.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;
+    border-radius:50%;background:var(--rc);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px}
+  ol.steps>li::after{content:"";position:absolute;left:14px;top:32px;bottom:2px;width:2px;background:var(--rt)}
+  ol.steps>li:last-child::after{display:none}
+  .stepline{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:4px}
+  .stepline strong{font-size:16px}
+  .say{display:block;margin:6px 0 2px;padding:9px 12px;background:var(--rt);border-radius:8px 8px 8px 2px;
+    font-weight:600;max-width:60ch}
+  .say::before{content:"You type: ";font-weight:400;color:var(--muted)}
+  .note{color:var(--muted);font-size:14.5px;margin:4px 0 0;max-width:62ch}
+  li.soonstep{opacity:.85}
+  li.soonstep::before{background:#fff !important;color:var(--rc);border:2px dashed var(--rc)}
+
+  aside.side{background:var(--rt);border-radius:12px;padding:18px 20px;align-self:start}
+  aside.side h3{margin:0 0 8px;font-size:16px}
+  aside.side ul{margin:0 0 14px;padding-left:18px}
+  aside.side li{margin:3px 0}
+  aside.side p{margin:0 0 12px}
+  .branchbox{margin-top:10px;padding:12px 14px;border:2px dashed var(--rc);border-radius:10px;background:#fff}
+  .branchbox b{color:var(--rc)}
+
+  #a{--rc:var(--a);--rt:var(--a-t)} #b{--rc:var(--b);--rt:var(--b-t)} #c{--rc:var(--c);--rt:var(--c-t)}
+  #d{--rc:var(--d);--rt:var(--d-t)} #e{--rc:var(--e);--rt:var(--e-t)} #f{--rc:var(--f);--rt:var(--f-t)}
+
+  /* specify panel */
+  .specify{margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .specify section{border:1.5px solid var(--line);border-radius:12px;padding:18px 20px}
+  .specify h2{margin:0 0 8px;font-size:18px}
+  .specify ul{margin:0;padding-left:18px}
+  .specify li{margin:4px 0}
+  footer{margin-top:40px;color:var(--muted);font-size:13.5px}
+
+  @media print{
+    .wrap{padding:0}
+    .tree,.route,aside.side,.specify section{break-inside:avoid}
+    .opt:hover{transform:none}
+    a{text-decoration:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Valuation Agent: where to start</h1>
+  <p>Pick the situation you're in, attach what it asks for, and type the message shown. File names don't matter — the agent works out what each file is.</p>
+  <nav class="life" aria-label="Lifecycle">
+    <a class="la" href="#a">Set up a company<small>Once per company</small></a>
+    <a class="lb" href="#b">Add a monthly file<small>Every month</small></a>
+    <a class="lc" href="#c">Prepare the quarter<small>Quarter end</small></a>
+    <a class="ld" href="#d">Review and finalize<small>Once per quarter</small></a>
+    <a class="le" href="#e">LP report data<small>After finalizing</small></a>
+  </nav>
+</header>
+
+<section class="tree" aria-labelledby="tree-h">
+  <h2 id="tree-h">What do you need to do?</h2>
+  <div class="q">Is the company already set up in the agent?</div>
+  <div class="branch">
+    <div class="yn">No</div>
+    <div class="opts">
+      <a class="opt oa" href="#a"><span>New portfolio company, or first time using the agent for it</span><b>A. Set up a company</b></a>
+    </div>
+  </div>
+  <div class="branch">
+    <div class="yn">Yes</div>
+    <div class="opts">
+      <a class="opt ob" href="#b"><span>A monthly financials pack or balance sheet arrived</span><b>B. Add a monthly file</b></a>
+      <a class="opt oc" href="#c"><span>It's quarter end and a valuation is due</span><b>C. Prepare the quarter</b></a>
+      <a class="opt od" href="#d"><span>A review pack is ready, or you need to change something</span><b>D. Review and finalize</b></a>
+      <a class="opt oe" href="#e"><span>The valuation is final and you need numbers for the LP report</span><b>E. LP report data</b></a>
+      <a class="opt of" href="#f"><span>You just want to check files, status or history</span><b>F. Quick questions</b></a>
+    </div>
+  </div>
+
+  <div class="key" aria-label="Key">
+    <div><span class="chip attach">Attach</span> add files with the paperclip</div>
+    <div><span class="chip type">Type</span> what you write in the chat</div>
+    <div><span class="chip decide">Decide</span> the agent asks, you answer</div>
+    <div><span class="chip agent">Agent</span> happens automatically</div>
+    <div><span class="chip excel">Excel</span> done outside the agent</div>
+    <div><span class="chip soon">Coming</span> not built yet</div>
+  </div>
+</section>
+
+<!-- A -->
+<section class="route" id="a" aria-labelledby="a-h">
+  <div class="rhead"><div class="tag" aria-hidden="true">A</div><h2 id="a-h">Set up a company</h2><p>Once per company. Takes about 15 minutes.</p></div>
+  <div class="rbody">
+    <ol class="steps">
+      <li>
+        <div class="stepline"><span class="chip attach">Attach</span><strong>The background files you have</strong></div>
+        <p class="note">1–2 of the most recent valuation workbooks, and/or recent monthly financials and a balance sheet. Add the cap table if it's a separate file.</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip type">Type</span><strong>Ask the agent to set it up</strong></div>
+        <span class="say">Set up Opus. These are our past valuations and financials.</span>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip agent">Agent</span><strong>Reads every file and writes the company's methodology note</strong></div>
+        <p class="note">Company rules are taken from the workbooks and cited. Anything the files don't show uses the firm's defaults.</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip decide">Decide</span><strong>Answer its open questions</strong></div>
+        <span class="say">For Opus, "IC Model" means the investment committee model.</span>
+        <p class="note">Answered once, remembered for every future quarter.</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip excel">Excel</span><strong>Save the original files in the company folder</strong></div>
+        <p class="note">The agent checks and reminds you if something isn't there.</p>
+      </li>
+    </ol>
+    <aside class="side">
+      <h3>No valuation workbook yet?</h3>
+      <p>For a brand-new investment, build the first valuation the usual way (for example from the entry model). The agent's company note shows which firm defaults apply.</p>
+      <div class="branchbox">
+        <b>Then:</b> <span class="chip attach">Attach</span> the finished workbook and type
+        <span class="say">First valuation for Opus, 2026_Q3.</span>
+        It becomes the baseline for next quarter.
+      </div>
+      <p style="margin-top:12px"><span class="chip soon">Coming</span> A standard valuation template the agent can fill for new companies.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- B -->
+<section class="route" id="b" aria-labelledby="b-h">
+  <div class="rhead"><div class="tag" aria-hidden="true">B</div><h2 id="b-h">Add a monthly file</h2><p>Whenever a monthly pack or balance sheet arrives.</p></div>
+  <div class="rbody">
+    <ol class="steps">
+      <li>
+        <div class="stepline"><span class="chip attach">Attach</span><strong>The new file, as you received it</strong></div>
+        <p class="note">Monthly financials, a balance sheet, or supporting files: adjustment support, a cap table update, a comps export.</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip type">Type</span><strong>Say which company, plus anything unusual</strong></div>
+        <span class="say">New file for Opus.</span>
+        <span class="say">New file for Opus. February was restated.</span>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip agent">Agent</span><strong>Checks, reads and saves the numbers</strong></div>
+        <p class="note">Spots duplicates, new versions and layout changes. Reads actual months only, never budget. Flags anything that doesn't add up.</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip decide">Decide</span><strong>If it says the file isn't in the company folder</strong></div>
+        <p class="note">Save it there, then:</p>
+        <span class="say">Saved — recheck filing for Opus.</span>
+      </li>
+    </ol>
+    <aside class="side">
+      <h3>Tip</h3>
+      <p>Send each month as it arrives. Quarter end is then a single message.</p>
+      <h3>Mention it if</h3>
+      <ul>
+        <li>a month was restated</li>
+        <li>the pack now includes an acquired business</li>
+        <li>the file is a draft</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- C -->
+<section class="route" id="c" aria-labelledby="c-h">
+  <div class="rhead"><div class="tag" aria-hidden="true">C</div><h2 id="c-h">Prepare the quarter</h2><p>At quarter end. Use the quarter format YYYY_Q#.</p></div>
+  <div class="rbody">
+    <ol class="steps">
+      <li>
+        <div class="stepline"><span class="chip type">Type</span><strong>Start the quarter</strong></div>
+        <span class="say">Prepare Opus 2026_Q3.</span>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip decide">Decide</span><strong>Give your heads-up, or say none</strong></div>
+        <span class="say">We acquired DEF on 15 August — include it pro forma.</span>
+        <p class="note">For each item it asks: this quarter only, or all future quarters? This is your one chance to steer before the review.</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip decide">Decide</span><strong>If something is missing, attach it</strong></div>
+        <p class="note">It names exactly what it needs, e.g. "September financials" or "pro forma support for DEF". <span class="chip attach">Attach</span> them and it carries on.</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip agent">Agent</span><strong>Builds the review pack and inputs workbook</strong></div>
+        <p class="note">Picks the right files, applies the methodology (firm → company → quarter → your notes), runs the checks and lists every file used or ignored.</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip excel">Excel</span><strong>Download the inputs and update the valuation workbook</strong></div>
+        <p class="note">Every input shows the file and cell it came from.</p>
+      </li>
+      <li class="soonstep">
+        <div class="stepline"><span class="chip soon">Coming</span><strong>The agent rolls the workbook forward for you</strong></div>
+      </li>
+    </ol>
+    <aside class="side">
+      <h3>Heads-up checklist</h3>
+      <ul>
+        <li>Acquisitions or disposals (with dates)</li>
+        <li>A change in how something is calculated</li>
+        <li>One-off or non-recurring items</li>
+        <li>Changes in ownership or the cap table</li>
+        <li>New entities or currencies</li>
+      </ul>
+      <p>Nothing to report? Just say <b>none</b>.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- D -->
+<section class="route" id="d" aria-labelledby="d-h">
+  <div class="rhead"><div class="tag" aria-hidden="true">D</div><h2 id="d-h">Review and finalize</h2><p>One conversation. Nothing changes until you confirm it.</p></div>
+  <div class="rbody">
+    <ol class="steps">
+      <li>
+        <div class="stepline"><span class="chip type">Type</span><strong>Open the review</strong></div>
+        <span class="say">Review Opus 2026_Q3.</span>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip type">Type</span><strong>Ask anything about the numbers</strong></div>
+        <span class="say">Why did EBITDA drop in August?</span>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip type">Type</span><strong>Make changes</strong></div>
+        <span class="say">August revenue should be 1,240 — it was restated.</span>
+        <span class="say">Accept adjustment a2, it recurs. Reject a3.</span>
+        <span class="say">Flag f4 is fine — timing of a one-off payment.</span>
+        <p class="note">It repeats each change back and asks: this quarter only, or all future quarters?</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip type">Type</span><strong>Apply the changes</strong></div>
+        <span class="say">Apply.</span>
+        <p class="note">You get an updated pack and inputs workbook. Repeat steps 2–4 as needed.</p>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip decide">Decide</span><strong>Finalize and confirm</strong></div>
+        <span class="say">Finalize Opus 2026_Q3.</span>
+        <p class="note">Any open high-priority flags must be acknowledged. Company-wide changes carry into next quarter automatically.</p>
+      </li>
+    </ol>
+    <aside class="side">
+      <h3>Types of change</h3>
+      <ul>
+        <li><b>A number:</b> say the new value and why</li>
+        <li><b>A method:</b> e.g. "use 11.5x"</li>
+        <li><b>An adjustment:</b> accept, reject or change the amount</li>
+        <li><b>A flag:</b> explain why it's fine</li>
+      </ul>
+      <p>Changed your mind after finalizing? Ask to <b>reopen</b> the quarter.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- E -->
+<section class="route" id="e" aria-labelledby="e-h">
+  <div class="rhead"><div class="tag" aria-hidden="true">E</div><h2 id="e-h">LP report data</h2><p>After the valuation workbook is final.</p></div>
+  <div class="rbody">
+    <ol class="steps">
+      <li>
+        <div class="stepline"><span class="chip excel">Excel</span><strong>Finish the valuation workbook with the final inputs</strong></div>
+      </li>
+      <li>
+        <div class="stepline"><span class="chip attach">Attach</span><strong>The final valuation workbook</strong></div>
+        <span class="say">Final valuation for Opus 2026_Q3 — LP report data.</span>
+        <p class="note">This also becomes next quarter's starting point.</p>
+      </li>
+      <li class="soonstep">
+        <div class="stepline"><span class="chip soon">Coming</span><strong>The agent returns the LP report data table</strong></div>
+        <p class="note">Enterprise value, equity value, fair value of the fund's stake, implied multiple, quarter-on-quarter change, key metrics, and methodology changes with the reasons.</p>
+      </li>
+      <li class="soonstep">
+        <div class="stepline"><span class="chip soon">Coming</span><strong>A drafted LP report section</strong></div>
+      </li>
+    </ol>
+    <aside class="side">
+      <h3>What goes to the LP report</h3>
+      <ul>
+        <li>Headline values and the change since last quarter</li>
+        <li>LTM revenue and EBITDA</li>
+        <li>What changed in method, and why</li>
+        <li>Notable one-offs or acquisitions</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- F -->
+<section class="route" id="f" aria-labelledby="f-h">
+  <div class="rhead"><div class="tag" aria-hidden="true">F</div><h2 id="f-h">Quick questions</h2><p>Any time. No files needed.</p></div>
+  <div class="rbody">
+    <ol class="steps">
+      <li><div class="stepline"><span class="chip type">Type</span><strong>Files received</strong></div><span class="say">What files do we have for OceanSight?</span></li>
+      <li><div class="stepline"><span class="chip type">Type</span><strong>Where a quarter stands</strong></div><span class="say">What's the status of Opus 2026_Q3?</span></li>
+      <li><div class="stepline"><span class="chip type">Type</span><strong>How a company is valued</strong></div><span class="say">What's Opus's methodology, and what changed this year?</span></li>
+    </ol>
+    <aside class="side">
+      <h3>The agent won't</h3>
+      <ul>
+        <li>change, move or delete your files</li>
+        <li>calculate or approve the valuation</li>
+        <li>make up a number it can't find</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<div class="specify">
+  <section>
+    <h2>Always include</h2>
+    <ul>
+      <li>The company name</li>
+      <li>The quarter, as YYYY_Q# (e.g. 2026_Q3)</li>
+      <li>Whether a change is for this quarter only or going forward</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Easiest habits</h2>
+    <ul>
+      <li>One company per chat</li>
+      <li>Send monthly files as they arrive</li>
+      <li>Keep originals in the company folder</li>
+    </ul>
+  </section>
+  <section>
+    <h2>If something looks wrong</h2>
+    <ul>
+      <li>Ask it where a number came from — every value has a file and cell</li>
+      <li>Correct it at review; the original is kept alongside</li>
+      <li>Still stuck? Tell the agent owner</li>
+    </ul>
+  </section>
+</div>
+
+<footer>Valuation Agent team guide (MVP). Steps marked "Coming" are planned and not yet available.</footer>
+</div>
+</body>
+</html>

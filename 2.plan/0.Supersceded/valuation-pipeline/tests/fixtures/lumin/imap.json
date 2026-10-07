@@ -1,0 +1,231 @@
+{
+ "workbook": "LuminUltra_valuation_Q2-2026.xlsx",
+ "generated_by": "extract_schema.py v4 + apply_classifications.py",
+ "key_outputs": [
+  "Valuation!B5",
+  "Valuation!B3"
+ ],
+ "key_output_reasons": {
+  "Valuation!B5": "Equity value; =B3-B4",
+  "Valuation!B3": "EV; blended"
+ },
+ "controls": [],
+ "template_fingerprint": "ecee187c4cc2e131",
+ "materiality_basis": "confirmed key outputs",
+ "totals": {
+  "blocks": 6,
+  "cells": 8,
+  "material_blocks": 6,
+  "material_cells": 8
+ },
+ "named_ranges": [],
+ "blocking_issues": [],
+ "inputs": [
+  {
+   "id": "Financial Summary!AH9:AI9",
+   "sheet": "Financial Summary",
+   "range": "AH9:AI9",
+   "label": "Revenue",
+   "header": "Q1-26..Q2-26",
+   "n_cells": 2,
+   "sample_values": [
+    "8,700",
+    "9,356"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B3",
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B3": [
+     "Financial Summary!AH9",
+     "Valuation!B2",
+     "Valuation!B3"
+    ],
+    "Valuation!B5": [
+     "Financial Summary!AH9",
+     "Valuation!B2",
+     "Valuation!B3",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "financial_statement",
+   "expected_source": "statements",
+   "changes_each_quarter": "yes",
+   "notes": "test",
+   "confidence": "high",
+   "reviewed_by": "Test",
+   "reporting_required": null
+  },
+  {
+   "id": "Financial Summary!AH11:AI11",
+   "sheet": "Financial Summary",
+   "range": "AH11:AI11",
+   "label": "Adjusted EBITDA",
+   "header": "Q1-26..Q2-26",
+   "n_cells": 2,
+   "sample_values": [
+    "1,230",
+    "1,325"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B3",
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B3": [
+     "Financial Summary!AH11",
+     "Valuation!B1",
+     "Valuation!B3"
+    ],
+    "Valuation!B5": [
+     "Financial Summary!AH11",
+     "Valuation!B1",
+     "Valuation!B3",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "financial_statement",
+   "expected_source": "statements",
+   "changes_each_quarter": "yes",
+   "notes": "test",
+   "confidence": "high",
+   "reviewed_by": "Test",
+   "reporting_required": null
+  },
+  {
+   "id": "Financial Summary!AI12",
+   "sheet": "Financial Summary",
+   "range": "AI12",
+   "label": "Cash",
+   "header": "Q2-26",
+   "n_cells": 1,
+   "sample_values": [
+    "1,612"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Financial Summary!AI12",
+     "Valuation!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "financial_statement",
+   "expected_source": "statements",
+   "changes_each_quarter": "yes",
+   "notes": "test",
+   "confidence": "high",
+   "reviewed_by": "Test",
+   "reporting_required": null
+  },
+  {
+   "id": "Financial Summary!AI13",
+   "sheet": "Financial Summary",
+   "range": "AI13",
+   "label": "Long-term debt",
+   "header": "Q2-26",
+   "n_cells": 1,
+   "sample_values": [
+    "4,900"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Financial Summary!AI13",
+     "Valuation!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "financial_statement",
+   "expected_source": "statements",
+   "changes_each_quarter": "yes",
+   "notes": "test",
+   "confidence": "high",
+   "reviewed_by": "Test",
+   "reporting_required": null
+  },
+  {
+   "id": "Financial Summary!AI15",
+   "sheet": "Financial Summary",
+   "range": "AI15",
+   "label": "EV/EBITDA multiple",
+   "header": "Q2-26",
+   "n_cells": 1,
+   "sample_values": [
+    "11"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B3",
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B3": [
+     "Financial Summary!AI15",
+     "Valuation!B3"
+    ],
+    "Valuation!B5": [
+     "Financial Summary!AI15",
+     "Valuation!B3",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "assumption",
+   "expected_source": null,
+   "changes_each_quarter": "yes",
+   "notes": "test",
+   "confidence": "high",
+   "reviewed_by": "Test",
+   "reporting_required": null
+  },
+  {
+   "id": "Financial Summary!AI16",
+   "sheet": "Financial Summary",
+   "range": "AI16",
+   "label": "EV/Revenue multiple",
+   "header": "Q2-26",
+   "n_cells": 1,
+   "sample_values": [
+    "2"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B3",
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B3": [
+     "Financial Summary!AI16",
+     "Valuation!B3"
+    ],
+    "Valuation!B5": [
+     "Financial Summary!AI16",
+     "Valuation!B3",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "assumption",
+   "expected_source": null,
+   "changes_each_quarter": "yes",
+   "notes": "test",
+   "confidence": "high",
+   "reviewed_by": "Test",
+   "reporting_required": null
+  }
+ ]
+}

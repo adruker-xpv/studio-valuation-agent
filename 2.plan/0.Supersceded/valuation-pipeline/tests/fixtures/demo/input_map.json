@@ -1,0 +1,285 @@
+{
+ "workbook": "base_q2.xlsx",
+ "generated_by": "extract_schema.py v4 + apply_classifications.py",
+ "key_outputs": [
+  "Valuation!B5"
+ ],
+ "key_output_reasons": {
+  "Valuation!B5": "Fair value; final formula applying the illiquidity discount (=B4*(1-Inputs!B4))"
+ },
+ "controls": [],
+ "template_fingerprint": "f9a021d66fe22645",
+ "materiality_basis": "confirmed key outputs",
+ "totals": {
+  "blocks": 8,
+  "cells": 17,
+  "material_blocks": 8,
+  "material_cells": 17
+ },
+ "named_ranges": [],
+ "blocking_issues": [],
+ "inputs": [
+  {
+   "id": "Inputs!B3",
+   "sheet": "Inputs",
+   "range": "B3",
+   "label": "EV/EBITDA multiple",
+   "header": "2026-06-30",
+   "n_cells": 1,
+   "sample_values": [
+    "9.5"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Inputs!B3",
+     "Valuation!B2",
+     "Valuation!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "assumption",
+   "expected_source": null,
+   "changes_each_quarter": "yes",
+   "notes": "Labelled EV/EBITDA multiple; path Inputs!B3 -> Valuation!B2 -> Valuation!B5",
+   "confidence": "high",
+   "reviewed_by": null,
+   "reporting_required": null
+  },
+  {
+   "id": "Inputs!B4",
+   "sheet": "Inputs",
+   "range": "B4",
+   "label": "Illiquidity discount",
+   "header": "2026-06-30",
+   "n_cells": 1,
+   "sample_values": [
+    "0.15"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Inputs!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "assumption",
+   "expected_source": null,
+   "changes_each_quarter": "yes",
+   "notes": "Labelled Illiquidity discount; used at Valuation!B5",
+   "confidence": "high",
+   "reviewed_by": null,
+   "reporting_required": null
+  },
+  {
+   "id": "Inputs!B6",
+   "sheet": "Inputs",
+   "range": "B6",
+   "label": "?",
+   "header": "2026-06-30",
+   "n_cells": 1,
+   "sample_values": [
+    "1.1"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Inputs!B6",
+     "Adjustments!B2",
+     "Valuation!B2",
+     "Valuation!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "assumption",
+   "expected_source": null,
+   "changes_each_quarter": "yes",
+   "notes": "analyst: management adjustment factor",
+   "confidence": "high",
+   "reviewed_by": "Test Analyst",
+   "reporting_required": null
+  },
+  {
+   "id": "Quarterly!B2:E2",
+   "sheet": "Quarterly",
+   "range": "B2:E2",
+   "label": "Revenue",
+   "header": "Q3-25..Q2-26",
+   "n_cells": 4,
+   "sample_values": [
+    "4,200",
+    "4,350",
+    "4,410",
+    "4,600"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Quarterly!B2",
+     "Quarterly!B5",
+     "Valuation!B1",
+     "Valuation!B2",
+     "Valuation!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "financial_statement",
+   "expected_source": "Income statement: Revenue by quarter",
+   "changes_each_quarter": "yes",
+   "notes": "Revenue row; path via Quarterly!B5 -> Valuation!B1",
+   "confidence": "high",
+   "reviewed_by": null,
+   "reporting_required": null
+  },
+  {
+   "id": "Quarterly!B3:E3",
+   "sheet": "Quarterly",
+   "range": "B3:E3",
+   "label": "COGS",
+   "header": "Q3-25..Q2-26",
+   "n_cells": 4,
+   "sample_values": [
+    "2,500",
+    "2,580",
+    "2,600",
+    "2,700"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Quarterly!B3",
+     "Quarterly!B5",
+     "Valuation!B1",
+     "Valuation!B2",
+     "Valuation!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "financial_statement",
+   "expected_source": "Income statement: COGS by quarter",
+   "changes_each_quarter": "yes",
+   "notes": "COGS row; path via Quarterly!B5",
+   "confidence": "high",
+   "reviewed_by": null,
+   "reporting_required": null
+  },
+  {
+   "id": "Quarterly!B4:E4",
+   "sheet": "Quarterly",
+   "range": "B4:E4",
+   "label": "SG&A",
+   "header": "Q3-25..Q2-26",
+   "n_cells": 4,
+   "sample_values": [
+    "900",
+    "920",
+    "950",
+    "980"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Quarterly!B4",
+     "Quarterly!B5",
+     "Valuation!B1",
+     "Valuation!B2",
+     "Valuation!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "financial_statement",
+   "expected_source": "Income statement: SG&A by quarter",
+   "changes_each_quarter": "yes",
+   "notes": "SG&A row; path via Quarterly!B5",
+   "confidence": "high",
+   "reviewed_by": null,
+   "reporting_required": null
+  },
+  {
+   "id": "Adjustments!B1",
+   "sheet": "Adjustments",
+   "range": "B1",
+   "label": "One-off costs added back",
+   "header": "",
+   "n_cells": 1,
+   "sample_values": [
+    "120"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Adjustments!B1",
+     "Valuation!B1",
+     "Valuation!B2",
+     "Valuation!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "assumption",
+   "expected_source": "Analyst: one-off costs added back",
+   "changes_each_quarter": "yes",
+   "notes": "Hidden sheet; path Adjustments!B1 -> Valuation!B1",
+   "confidence": "medium",
+   "reviewed_by": null,
+   "reporting_required": null
+  },
+  {
+   "id": "Valuation!B3",
+   "sheet": "Valuation",
+   "range": "B3",
+   "label": "Less: net debt",
+   "header": "",
+   "n_cells": 1,
+   "sample_values": [
+    "3,200"
+   ],
+   "material": true,
+   "feeds_key_outputs": [
+    "Valuation!B5"
+   ],
+   "paths_to_key_outputs": {
+    "Valuation!B5": [
+     "Valuation!B3",
+     "Valuation!B4",
+     "Valuation!B5"
+    ]
+   },
+   "flags": [],
+   "type": "financial_statement",
+   "expected_source": "Balance sheet: net debt",
+   "changes_each_quarter": "yes",
+   "notes": "Labelled Less: net debt; path Valuation!B3 -> Valuation!B4",
+   "confidence": "medium",
+   "reviewed_by": null,
+   "reporting_required": null
+  }
+ ]
+}

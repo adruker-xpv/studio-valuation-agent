@@ -1,0 +1,3 @@
+{"company": "Test Co", "period_end": "2026-06-30", "source_units": "units", "report_units": "thousands",
+ "ev_ebitda_multiple": 9.5, "ev_revenue_multiple": null, "weight_ev_ebitda": 1, "weight_ev_revenue": 0,
+ "ebitda_adjustments": 120, "illiquidity_discount": 0.15, "ownership_pct": 1, "other_claims": 0, "label_overrides": {}}

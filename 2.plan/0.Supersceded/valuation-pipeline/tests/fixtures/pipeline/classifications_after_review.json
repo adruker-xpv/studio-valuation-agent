@@ -1,0 +1,3 @@
+{"accept_suggestions": true, "reviewed_by_all": "Test Analyst",
+ "classifications": [{"id": "Inputs!B6", "type": "assumption", "changes_each_quarter": "yes", "confidence": "high",
+   "notes": "analyst: management adjustment factor, entered each quarter"}]}

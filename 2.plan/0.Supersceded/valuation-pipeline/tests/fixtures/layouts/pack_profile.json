@@ -1,0 +1,274 @@
+{
+ "version": 2,
+ "workbook": "LuminUltra_valuation_Q2-2026.xlsx",
+ "generated": "2026-09-29",
+ "status": "READY_FOR_REPLAY",
+ "template_fingerprint": "ecee187c4cc2e131",
+ "period_end": "2026-06",
+ "fiscal_year_start_month": 1,
+ "key_outputs": [
+  "Valuation!B5",
+  "Valuation!B3"
+ ],
+ "statement_layout": [
+  {
+   "layout": "sheet per month",
+   "roles": [
+    "current",
+    "ytd"
+   ],
+   "sheets": [
+    "Apr 2026",
+    "May 2026",
+    "Jun 2026"
+   ]
+  }
+ ],
+ "layout_checks": [
+  "LuminUltra_monthly_pack_Q2.xlsx: 6 numbers sit under a label repeated on the same sheet; they are kept apart as '<label> #2' etc."
+ ],
+ "concepts": [
+  {
+   "concept_id": "is.revenue",
+   "name": "Revenue",
+   "entity": "LuminUltra",
+   "targets": [
+    "Financial Summary!AH9:AI9"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "quarter_sum_of_months",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": null,
+   "status": "EXECUTABLE",
+   "execution": {
+    "months": 3,
+    "operation": "sum_months",
+    "scale": 0.001,
+    "sign": 1,
+    "source": {
+     "label": "total revenue",
+     "role": "current",
+     "sheet": "statement"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Financial Summary!AI9": 0,
+    "Financial Summary!AH9": -3
+   },
+   "offset_basis": {
+    "Financial Summary!AI9": "reproduced",
+    "Financial Summary!AH9": "inferred from layout"
+   },
+   "evidence": [
+    "Financial Summary!AI9 <- LuminUltra_monthly_pack_Q2.xlsx / Apr 2026!B17 (Total Revenue, current, 2026-04); LuminUltra_monthly_pack_Q2.xlsx / May 2026!B17 (Total Revenue, current, 2026-05); LuminUltra_monthly_pack_Q2.xlsx / Jun 2026!B17 (Total Revenue, current, 2026-06)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "f9770fd08809a7e5",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "is.adj_ebitda",
+   "name": "Adjusted EBITDA",
+   "entity": "LuminUltra",
+   "targets": [
+    "Financial Summary!AH11:AI11"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "ytd_difference",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": null,
+   "status": "EXECUTABLE",
+   "execution": {
+    "fiscal_year_start_month": 1,
+    "operation": "ytd_difference",
+    "scale": 0.001,
+    "sign": 1,
+    "source": {
+     "label": "ebitda before xtra and f x",
+     "role": "ytd",
+     "sheet": "statement"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Financial Summary!AI11": 0,
+    "Financial Summary!AH11": -3
+   },
+   "offset_basis": {
+    "Financial Summary!AI11": "reproduced",
+    "Financial Summary!AH11": "inferred from layout"
+   },
+   "evidence": [
+    "Financial Summary!AI11 <- LuminUltra_monthly_pack_Q2.xlsx / Apr 2026!R71 (EBITDA before XTRA and F/X, ytd, 2026-04); LuminUltra_monthly_pack_Q2.xlsx / Apr 2026!B71 (EBITDA before XTRA and F/X, current, 2026-04); LuminUltra_monthly_pack_Q2.xlsx / Jun 2026!R71 (EBITDA before XTRA and F/X, ytd, 2026-06)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "0d51b9d50c5d361e",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "bs.cash",
+   "name": "Cash",
+   "entity": "LuminUltra",
+   "targets": [
+    "Financial Summary!AI12"
+   ],
+   "write_mode": "replace_period_value",
+   "period_rule": "quarter_end_balance",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": null,
+   "status": "EXECUTABLE",
+   "execution": {
+    "operation": "value_at",
+    "scale": 0.001,
+    "sign": 1,
+    "source": {
+     "label": "cash",
+     "role": "current",
+     "sheet": "statement"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Financial Summary!AI12": 0
+   },
+   "offset_basis": {
+    "Financial Summary!AI12": "reproduced"
+   },
+   "evidence": [
+    "Financial Summary!AI12 <- LuminUltra_monthly_pack_Q2.xlsx / Jun 2026!B120 (Cash, current, 2026-06)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "1fd9ea48ebdd84fb",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "bs.debt",
+   "name": "Long-term debt",
+   "entity": "LuminUltra",
+   "targets": [
+    "Financial Summary!AI13"
+   ],
+   "write_mode": "replace_period_value",
+   "period_rule": "quarter_end_balance",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": null,
+   "status": "EXECUTABLE",
+   "execution": {
+    "operation": "value_at",
+    "scale": 0.001,
+    "sign": 1,
+    "source": {
+     "label": "long term debt",
+     "role": "current",
+     "sheet": "statement"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Financial Summary!AI13": 0
+   },
+   "offset_basis": {
+    "Financial Summary!AI13": "reproduced"
+   },
+   "evidence": [
+    "Financial Summary!AI13 <- LuminUltra_monthly_pack_Q2.xlsx / Jun 2026!B121 (Long Term Debt, current, 2026-06)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "2a29c2954b275e91",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.ev_ebitda",
+   "name": "EV/EBITDA multiple",
+   "entity": null,
+   "targets": [
+    "Financial Summary!AI15"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "manual_input",
+   "notes": null,
+   "questions": null,
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Financial Summary!AI15": null
+   },
+   "offset_basis": {
+    "Financial Summary!AI15": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "c984a8b75b1cdf59",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.ev_rev",
+   "name": "EV/Revenue multiple",
+   "entity": null,
+   "targets": [
+    "Financial Summary!AI16"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "manual_input",
+   "notes": null,
+   "questions": null,
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Financial Summary!AI16": null
+   },
+   "offset_basis": {
+    "Financial Summary!AI16": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "5d85fa055a2fc6f5",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  }
+ ]
+}

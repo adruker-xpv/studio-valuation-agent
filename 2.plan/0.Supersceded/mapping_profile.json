@@ -1,0 +1,1939 @@
+{
+ "version": 2,
+ "workbook": "2026_Q1_-_Opus_Water_-_Valuation_Workbook_DRAFT-be38ab53.xlsx",
+ "generated": "2026-10-06",
+ "status": "REVIEW_REQUIRED",
+ "template_fingerprint": "4014db987ff1ebe4",
+ "period_end": "2026-12",
+ "fiscal_year_start_month": 1,
+ "key_outputs": [
+  "III. Valuation Summary!F12",
+  "III. Valuation Summary!F15",
+  "III. Valuation Summary!F25",
+  "III. Valuation Summary!F26",
+  "III. Valuation Summary!F9",
+  "Financial Summary!J9",
+  "III. Valuation Summary!F13",
+  "III. Valuation Summary!F29",
+  "III. Valuation Summary!F27",
+  "II. Attribution Summary!D25",
+  "III. Valuation Summary!I14",
+  "III. Valuation Summary!L14",
+  "III. Valuation Summary!I20",
+  "III. Valuation Summary!I21",
+  "III. Valuation Summary!F44",
+  "III. Valuation Summary!H44",
+  "III. Valuation Summary!K44"
+ ],
+ "statement_layout": [
+  {
+   "layout": "sheet per month",
+   "roles": [
+    "budget",
+    "current",
+    "variance",
+    "ytd"
+   ],
+   "sheets": [
+    "PB_CACHE",
+    "PB_ORIGINAL_FORMATTING_HOLDER",
+    "Jan 2026",
+    "Opus PL Mar 25",
+    "RP Mar Stub IS",
+    "Plug NetSuite YoY IS",
+    "RP Feb Stub IS"
+   ]
+  },
+  {
+   "layout": "sheet per month",
+   "roles": [
+    "budget",
+    "current",
+    "variance",
+    "ytd"
+   ],
+   "sheets": [
+    "PB_CACHE",
+    "PB_ORIGINAL_FORMATTING_HOLDER",
+    "Feb 2026",
+    "Opus PL Mar 25",
+    "RP Mar Stub IS",
+    "Plug NetSuite YoY IS",
+    "RP Feb Stub IS"
+   ]
+  },
+  {
+   "layout": "months across columns",
+   "roles": [
+    "budget",
+    "current",
+    "prior_year",
+    "variance",
+    "ytd"
+   ],
+   "sheets": [
+    "PB_CACHE",
+    "2026 Actual_Opus",
+    "Plug IS - Jan '26",
+    "Plug IS - Feb '26",
+    "Plug BS - Jan '26",
+    "Plug BS - Feb '26",
+    "RPA IS - Jan '26",
+    "RPA IS - Feb '26",
+    "RPA BS - Jan '26",
+    "RPA BS - Feb '26",
+    "Yeary IS - Jan '26",
+    "Yeary IS - Feb '26",
+    "Yeary BS - Jan '26",
+    "Yeary BS - Feb '26",
+    "Jan '26 Prof Svcs Detail",
+    "Feb '26 Prof Svcs Detail",
+    "2026 Budget_Opus_4Q Meeting",
+    "2026 Budget Detail_4Q Meeting",
+    "2026 Budget_Opus_251208",
+    "Opus Pro Forma",
+    "Slide 4",
+    "Slide 8",
+    "Slide 28",
+    "Slide 29",
+    "Slide 31",
+    "Facility_Hanover_4Q Meeting",
+    "Facility_Buffalo_4Q Meeting",
+    "Facility_Yeary_4Q Meeting",
+    "SGA_Other_4Q Meeting",
+    "2026 Budget Detail_251208",
+    "Facility_Hanover_251208",
+    "Facility_Buffalo_251208",
+    "Facility_Yeary_251208",
+    "JOP",
+    "SGA Walk",
+    "2025 9+3 Baseline",
+    "D&A",
+    "Shipments_Pipe Plugs",
+    "Orders_Pipe Plugs",
+    "Orders v. Prod Revenue",
+    "Order Detail_Strainers_HX",
+    "Order Pipeline_Strainer_HX",
+    "Buffalo Expense",
+    "Buffalo Revenue History",
+    "2026 Project Schedule_Buffalo",
+    "Project Pivot",
+    "New Heads",
+    "CapEx",
+    "SGA_Sales and Marketing",
+    "SGA_Travel and Entertainment",
+    "SGA_Professional Services",
+    "SGA_Insurance",
+    "SGA_Other_251208",
+    "SGA_Adjustments",
+    "Misc Calculations",
+    "Yeary Model"
+   ]
+  }
+ ],
+ "layout_checks": [
+  "2026_Consolidated_Master_File_0126.xlsx: 1506 numbers are under month headers with no year; they are not used",
+  "2026_Consolidated_Master_File_0126.xlsx: 1258 numbers sit under a label repeated on the same sheet; they are kept apart as '<label> #2' etc.",
+  "2026_Consolidated_Master_File_0226.xlsx: 1506 numbers are under month headers with no year; they are not used",
+  "2026_Consolidated_Master_File_0226.xlsx: 1265 numbers sit under a label repeated on the same sheet; they are kept apart as '<label> #2' etc.",
+  "2026_Consolidated_Master_File_0326_V2.xlsx: 206 numbers are under month headers with no year; they are not used",
+  "2026_Consolidated_Master_File_0326_V2.xlsx: 24699 numbers sit under a label repeated on the same sheet; they are kept apart as '<label> #2' etc.",
+  "2026_Consolidated_Master_File_0326_V2.xlsx: statement period 2026-12 is in the future - check the file date"
+ ],
+ "concepts": [
+  {
+   "concept_id": "cap.unlabelled",
+   "name": "Unlabelled input I. Cover Page!B9",
+   "entity": "Opus Water",
+   "targets": [
+    "I. Cover Page!B9"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "I. Cover Page!B9": null
+   },
+   "offset_basis": {
+    "I. Cover Page!B9": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "d232b5edbb71e5e7",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "prior.debt",
+   "name": "Debt",
+   "entity": "Opus Water",
+   "targets": [
+    "III. Valuation Summary!K14"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this)."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "III. Valuation Summary!K14": null
+   },
+   "offset_basis": {
+    "III. Valuation Summary!K14": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "53244dd682813ec2",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "prior.impact_of_multiple",
+   "name": "Impact of Multiple",
+   "entity": "Opus Water",
+   "targets": [
+    "III. Valuation Summary!H37",
+    "III. Valuation Summary!K37"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this)."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "III. Valuation Summary!H37": null,
+    "III. Valuation Summary!K37": null
+   },
+   "offset_basis": {
+    "III. Valuation Summary!H37": null,
+    "III. Valuation Summary!K37": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "75f5dbd207d1fe34",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "prior.impact_of_ebitda",
+   "name": "Impact of EBITDA",
+   "entity": "Opus Water",
+   "targets": [
+    "III. Valuation Summary!H38",
+    "III. Valuation Summary!K38"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this)."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "III. Valuation Summary!H38": null,
+    "III. Valuation Summary!K38": null
+   },
+   "offset_basis": {
+    "III. Valuation Summary!H38": null,
+    "III. Valuation Summary!K38": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "0b16b3fca1d554a4",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "prior.impact_of_net_cash",
+   "name": "Impact of Net Cash",
+   "entity": "Opus Water",
+   "targets": [
+    "III. Valuation Summary!H39",
+    "III. Valuation Summary!K39"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this)."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "III. Valuation Summary!H39": null,
+    "III. Valuation Summary!K39": null
+   },
+   "offset_basis": {
+    "III. Valuation Summary!H39": null,
+    "III. Valuation Summary!K39": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "998c6f65f14689bd",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.impact_of_fx",
+   "name": "Impact of FX",
+   "entity": "Opus Water",
+   "targets": [
+    "III. Valuation Summary!F40"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "III. Valuation Summary!F40": null
+   },
+   "offset_basis": {
+    "III. Valuation Summary!F40": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "e4c8471839fd9d90",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "prior.impact_of_fx",
+   "name": "Impact of FX",
+   "entity": "Opus Water",
+   "targets": [
+    "III. Valuation Summary!H40",
+    "III. Valuation Summary!K40"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this)."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "III. Valuation Summary!H40": null,
+    "III. Valuation Summary!K40": null
+   },
+   "offset_basis": {
+    "III. Valuation Summary!H40": null,
+    "III. Valuation Summary!K40": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "9b0c09cc278ad323",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "prior.change_in_ownership",
+   "name": "Change in Ownership",
+   "entity": "Opus Water",
+   "targets": [
+    "III. Valuation Summary!H41",
+    "III. Valuation Summary!K41"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this)."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "III. Valuation Summary!H41": null,
+    "III. Valuation Summary!K41": null
+   },
+   "offset_basis": {
+    "III. Valuation Summary!H41": null,
+    "III. Valuation Summary!K41": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "3ae5328a4501bae4",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.change_in_valuation_methodology",
+   "name": "Change in Valuation Methodology",
+   "entity": "Opus Water",
+   "targets": [
+    "III. Valuation Summary!F42"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "III. Valuation Summary!F42": null
+   },
+   "offset_basis": {
+    "III. Valuation Summary!F42": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "ec5952ef7123de4a",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "prior.change_in_valuation_methodology",
+   "name": "Change in Valuation Methodology",
+   "entity": "Opus Water",
+   "targets": [
+    "III. Valuation Summary!H42",
+    "III. Valuation Summary!K42"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this)."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "III. Valuation Summary!H42": null,
+    "III. Valuation Summary!K42": null
+   },
+   "offset_basis": {
+    "III. Valuation Summary!H42": null,
+    "III. Valuation Summary!K42": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "026d02d08eeb3c2f",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "ref.comp_set_v_comparable",
+   "name": "comp set V. Comparables",
+   "entity": "Opus Water",
+   "targets": [
+    "V. Comparables!D11",
+    "V. Comparables!J11",
+    "V. Comparables!D12",
+    "V. Comparables!J12",
+    "V. Comparables!D13",
+    "V. Comparables!J13",
+    "V. Comparables!D14",
+    "V. Comparables!J14",
+    "V. Comparables!D15",
+    "V. Comparables!J15",
+    "V. Comparables!D16",
+    "V. Comparables!J16",
+    "V. Comparables!D17",
+    "V. Comparables!J17",
+    "V. Comparables!D18",
+    "V. Comparables!J18",
+    "V. Comparables!D19",
+    "V. Comparables!J19",
+    "V. Comparables!D20",
+    "V. Comparables!J20",
+    "V. Comparables!D21",
+    "V. Comparables!J21",
+    "V. Comparables!D22",
+    "V. Comparables!J22",
+    "V. Comparables!D25",
+    "V. Comparables!J25",
+    "V. Comparables!D26",
+    "V. Comparables!J26",
+    "V. Comparables!D27",
+    "V. Comparables!J27",
+    "V. Comparables!D28",
+    "V. Comparables!J28",
+    "V. Comparables!D29",
+    "V. Comparables!J29",
+    "V. Comparables!D30",
+    "V. Comparables!J30",
+    "V. Comparables!D31",
+    "V. Comparables!J31",
+    "V. Comparables!D33",
+    "V. Comparables!J33",
+    "V. Comparables!D34",
+    "V. Comparables!J34",
+    "V. Comparables!D35",
+    "V. Comparables!J35",
+    "V. Comparables!D36",
+    "V. Comparables!J36",
+    "V. Comparables!C58"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Comparable set: carried forward; review the set (add or remove companies or deals) when due."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "V. Comparables!D11": null,
+    "V. Comparables!J11": null,
+    "V. Comparables!D12": null,
+    "V. Comparables!J12": null,
+    "V. Comparables!D13": null,
+    "V. Comparables!J13": null,
+    "V. Comparables!D14": null,
+    "V. Comparables!J14": null,
+    "V. Comparables!D15": null,
+    "V. Comparables!J15": null,
+    "V. Comparables!D16": null,
+    "V. Comparables!J16": null,
+    "V. Comparables!D17": null,
+    "V. Comparables!J17": null,
+    "V. Comparables!D18": null,
+    "V. Comparables!J18": null,
+    "V. Comparables!D19": null,
+    "V. Comparables!J19": null,
+    "V. Comparables!D20": null,
+    "V. Comparables!J20": null,
+    "V. Comparables!D21": null,
+    "V. Comparables!J21": null,
+    "V. Comparables!D22": null,
+    "V. Comparables!J22": null,
+    "V. Comparables!D25": null,
+    "V. Comparables!J25": null,
+    "V. Comparables!D26": null,
+    "V. Comparables!J26": null,
+    "V. Comparables!D27": null,
+    "V. Comparables!J27": null,
+    "V. Comparables!D28": null,
+    "V. Comparables!J28": null,
+    "V. Comparables!D29": null,
+    "V. Comparables!J29": null,
+    "V. Comparables!D30": null,
+    "V. Comparables!J30": null,
+    "V. Comparables!D31": null,
+    "V. Comparables!J31": null,
+    "V. Comparables!D33": null,
+    "V. Comparables!J33": null,
+    "V. Comparables!D34": null,
+    "V. Comparables!J34": null,
+    "V. Comparables!D35": null,
+    "V. Comparables!J35": null,
+    "V. Comparables!D36": null,
+    "V. Comparables!J36": null,
+    "V. Comparables!C58": null
+   },
+   "offset_basis": {
+    "V. Comparables!D11": null,
+    "V. Comparables!J11": null,
+    "V. Comparables!D12": null,
+    "V. Comparables!J12": null,
+    "V. Comparables!D13": null,
+    "V. Comparables!J13": null,
+    "V. Comparables!D14": null,
+    "V. Comparables!J14": null,
+    "V. Comparables!D15": null,
+    "V. Comparables!J15": null,
+    "V. Comparables!D16": null,
+    "V. Comparables!J16": null,
+    "V. Comparables!D17": null,
+    "V. Comparables!J17": null,
+    "V. Comparables!D18": null,
+    "V. Comparables!J18": null,
+    "V. Comparables!D19": null,
+    "V. Comparables!J19": null,
+    "V. Comparables!D20": null,
+    "V. Comparables!J20": null,
+    "V. Comparables!D21": null,
+    "V. Comparables!J21": null,
+    "V. Comparables!D22": null,
+    "V. Comparables!J22": null,
+    "V. Comparables!D25": null,
+    "V. Comparables!J25": null,
+    "V. Comparables!D26": null,
+    "V. Comparables!J26": null,
+    "V. Comparables!D27": null,
+    "V. Comparables!J27": null,
+    "V. Comparables!D28": null,
+    "V. Comparables!J28": null,
+    "V. Comparables!D29": null,
+    "V. Comparables!J29": null,
+    "V. Comparables!D30": null,
+    "V. Comparables!J30": null,
+    "V. Comparables!D31": null,
+    "V. Comparables!J31": null,
+    "V. Comparables!D33": null,
+    "V. Comparables!J33": null,
+    "V. Comparables!D34": null,
+    "V. Comparables!J34": null,
+    "V. Comparables!D35": null,
+    "V. Comparables!J35": null,
+    "V. Comparables!D36": null,
+    "V. Comparables!J36": null,
+    "V. Comparables!C58": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "e058d6c3e7ae2df0",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.opu_water_ebitda",
+   "name": "Opus Water EBITDA",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F21:T21"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "uncertain",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!F21": null,
+    "Pro Forma Financials (Q1)!G21": null,
+    "Pro Forma Financials (Q1)!H21": null,
+    "Pro Forma Financials (Q1)!I21": null,
+    "Pro Forma Financials (Q1)!J21": null,
+    "Pro Forma Financials (Q1)!K21": null,
+    "Pro Forma Financials (Q1)!L21": null,
+    "Pro Forma Financials (Q1)!M21": null,
+    "Pro Forma Financials (Q1)!N21": null,
+    "Pro Forma Financials (Q1)!O21": null,
+    "Pro Forma Financials (Q1)!P21": null,
+    "Pro Forma Financials (Q1)!Q21": null,
+    "Pro Forma Financials (Q1)!R21": null,
+    "Pro Forma Financials (Q1)!S21": null,
+    "Pro Forma Financials (Q1)!T21": null
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!F21": null,
+    "Pro Forma Financials (Q1)!G21": null,
+    "Pro Forma Financials (Q1)!H21": null,
+    "Pro Forma Financials (Q1)!I21": null,
+    "Pro Forma Financials (Q1)!J21": null,
+    "Pro Forma Financials (Q1)!K21": null,
+    "Pro Forma Financials (Q1)!L21": null,
+    "Pro Forma Financials (Q1)!M21": null,
+    "Pro Forma Financials (Q1)!N21": null,
+    "Pro Forma Financials (Q1)!O21": null,
+    "Pro Forma Financials (Q1)!P21": null,
+    "Pro Forma Financials (Q1)!Q21": null,
+    "Pro Forma Financials (Q1)!R21": null,
+    "Pro Forma Financials (Q1)!S21": null,
+    "Pro Forma Financials (Q1)!T21": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "0e8e3e3fdb573ee9",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.rp_adam_ebitda",
+   "name": "RP Adams EBITDA",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F22:G22"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "uncertain",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!F22": null,
+    "Pro Forma Financials (Q1)!G22": null
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!F22": null,
+    "Pro Forma Financials (Q1)!G22": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "108b40a60d5b75d4",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.yeary_control_ebitda",
+   "name": "Yeary Controls EBITDA",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F23:O23"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "uncertain",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!F23": null,
+    "Pro Forma Financials (Q1)!G23": null,
+    "Pro Forma Financials (Q1)!H23": null,
+    "Pro Forma Financials (Q1)!I23": null,
+    "Pro Forma Financials (Q1)!J23": null,
+    "Pro Forma Financials (Q1)!K23": null,
+    "Pro Forma Financials (Q1)!L23": null,
+    "Pro Forma Financials (Q1)!M23": null,
+    "Pro Forma Financials (Q1)!N23": null,
+    "Pro Forma Financials (Q1)!O23": null
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!F23": null,
+    "Pro Forma Financials (Q1)!G23": null,
+    "Pro Forma Financials (Q1)!H23": null,
+    "Pro Forma Financials (Q1)!I23": null,
+    "Pro Forma Financials (Q1)!J23": null,
+    "Pro Forma Financials (Q1)!K23": null,
+    "Pro Forma Financials (Q1)!L23": null,
+    "Pro Forma Financials (Q1)!M23": null,
+    "Pro Forma Financials (Q1)!N23": null,
+    "Pro Forma Financials (Q1)!O23": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "77056a7dc4c85c0f",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.adjustment_consulting",
+   "name": "ADJUSTMENT: Consulting",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F27:T27"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!F27": null,
+    "Pro Forma Financials (Q1)!G27": null,
+    "Pro Forma Financials (Q1)!H27": null,
+    "Pro Forma Financials (Q1)!I27": null,
+    "Pro Forma Financials (Q1)!J27": null,
+    "Pro Forma Financials (Q1)!K27": null,
+    "Pro Forma Financials (Q1)!L27": null,
+    "Pro Forma Financials (Q1)!M27": null,
+    "Pro Forma Financials (Q1)!N27": null,
+    "Pro Forma Financials (Q1)!O27": null,
+    "Pro Forma Financials (Q1)!P27": null,
+    "Pro Forma Financials (Q1)!Q27": null,
+    "Pro Forma Financials (Q1)!R27": null,
+    "Pro Forma Financials (Q1)!S27": null,
+    "Pro Forma Financials (Q1)!T27": null
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!F27": null,
+    "Pro Forma Financials (Q1)!G27": null,
+    "Pro Forma Financials (Q1)!H27": null,
+    "Pro Forma Financials (Q1)!I27": null,
+    "Pro Forma Financials (Q1)!J27": null,
+    "Pro Forma Financials (Q1)!K27": null,
+    "Pro Forma Financials (Q1)!L27": null,
+    "Pro Forma Financials (Q1)!M27": null,
+    "Pro Forma Financials (Q1)!N27": null,
+    "Pro Forma Financials (Q1)!O27": null,
+    "Pro Forma Financials (Q1)!P27": null,
+    "Pro Forma Financials (Q1)!Q27": null,
+    "Pro Forma Financials (Q1)!R27": null,
+    "Pro Forma Financials (Q1)!S27": null,
+    "Pro Forma Financials (Q1)!T27": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "66eb99e484cacc05",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.adjustment_recruiting_cost",
+   "name": "ADJUSTMENT: Recruiting Costs",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F28:T28"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "quarter_end_balance",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "EXECUTABLE",
+   "execution": {
+    "operation": "value_at",
+    "scale": 1000,
+    "sign": 1,
+    "source": {
+     "label": "stud bolt sa 193b7 10 x 8 lg zn ni",
+     "role": "current",
+     "sheet": "2026 project schedule buffalo"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!T28": 0,
+    "Pro Forma Financials (Q1)!F28": -42,
+    "Pro Forma Financials (Q1)!G28": -39,
+    "Pro Forma Financials (Q1)!H28": -36,
+    "Pro Forma Financials (Q1)!I28": -33,
+    "Pro Forma Financials (Q1)!J28": -30,
+    "Pro Forma Financials (Q1)!K28": -27,
+    "Pro Forma Financials (Q1)!L28": -24,
+    "Pro Forma Financials (Q1)!M28": -21,
+    "Pro Forma Financials (Q1)!N28": -18,
+    "Pro Forma Financials (Q1)!O28": -15,
+    "Pro Forma Financials (Q1)!P28": -12,
+    "Pro Forma Financials (Q1)!Q28": -9,
+    "Pro Forma Financials (Q1)!R28": -6,
+    "Pro Forma Financials (Q1)!S28": -3
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!T28": "reproduced",
+    "Pro Forma Financials (Q1)!F28": "inferred from layout",
+    "Pro Forma Financials (Q1)!G28": "inferred from layout",
+    "Pro Forma Financials (Q1)!H28": "inferred from layout",
+    "Pro Forma Financials (Q1)!I28": "inferred from layout",
+    "Pro Forma Financials (Q1)!J28": "inferred from layout",
+    "Pro Forma Financials (Q1)!K28": "inferred from layout",
+    "Pro Forma Financials (Q1)!L28": "inferred from layout",
+    "Pro Forma Financials (Q1)!M28": "inferred from layout",
+    "Pro Forma Financials (Q1)!N28": "inferred from layout",
+    "Pro Forma Financials (Q1)!O28": "inferred from layout",
+    "Pro Forma Financials (Q1)!P28": "inferred from layout",
+    "Pro Forma Financials (Q1)!Q28": "inferred from layout",
+    "Pro Forma Financials (Q1)!R28": "inferred from layout",
+    "Pro Forma Financials (Q1)!S28": "inferred from layout"
+   },
+   "evidence": [
+    "Pro Forma Financials (Q1)!T28 <- 2026_Consolidated_Master_File_0326_V2.xlsx / 2026 Project Schedule_Buffalo!H107 (Stud Bolt,SA 193B7, \u00be\u201d -10 x 8\" LG Zn-Ni, current, 2026-12)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "83d17e20f9419d62",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.adjustment_board_fee",
+   "name": "ADJUSTMENT: Board Fees",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F29:T29"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "quarter_end_balance",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "EXECUTABLE",
+   "execution": {
+    "operation": "value_at",
+    "scale": 1,
+    "sign": -1,
+    "source": {
+     "label": "adjustment xpv board fee",
+     "role": "current",
+     "sheet": "sga adjustment"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!G29": 0,
+    "Pro Forma Financials (Q1)!S29": 0,
+    "Pro Forma Financials (Q1)!F29": -39,
+    "Pro Forma Financials (Q1)!H29": -33,
+    "Pro Forma Financials (Q1)!I29": -30,
+    "Pro Forma Financials (Q1)!J29": -27,
+    "Pro Forma Financials (Q1)!K29": -24,
+    "Pro Forma Financials (Q1)!L29": -21,
+    "Pro Forma Financials (Q1)!M29": -18,
+    "Pro Forma Financials (Q1)!N29": -15,
+    "Pro Forma Financials (Q1)!O29": -12,
+    "Pro Forma Financials (Q1)!P29": -9,
+    "Pro Forma Financials (Q1)!Q29": -6,
+    "Pro Forma Financials (Q1)!R29": -3,
+    "Pro Forma Financials (Q1)!T29": 3
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!G29": "reproduced",
+    "Pro Forma Financials (Q1)!S29": "reproduced",
+    "Pro Forma Financials (Q1)!F29": "inferred from layout",
+    "Pro Forma Financials (Q1)!H29": "inferred from layout",
+    "Pro Forma Financials (Q1)!I29": "inferred from layout",
+    "Pro Forma Financials (Q1)!J29": "inferred from layout",
+    "Pro Forma Financials (Q1)!K29": "inferred from layout",
+    "Pro Forma Financials (Q1)!L29": "inferred from layout",
+    "Pro Forma Financials (Q1)!M29": "inferred from layout",
+    "Pro Forma Financials (Q1)!N29": "inferred from layout",
+    "Pro Forma Financials (Q1)!O29": "inferred from layout",
+    "Pro Forma Financials (Q1)!P29": "inferred from layout",
+    "Pro Forma Financials (Q1)!Q29": "inferred from layout",
+    "Pro Forma Financials (Q1)!R29": "inferred from layout",
+    "Pro Forma Financials (Q1)!T29": "inferred from layout"
+   },
+   "evidence": [
+    "Pro Forma Financials (Q1)!G29 <- 2026_Consolidated_Master_File_0326_V2.xlsx / SGA_Adjustments!X11 (Adjustment: XPV - Board Fees, current, 2026-12)",
+    "Pro Forma Financials (Q1)!S29 <- 2026_Consolidated_Master_File_0326_V2.xlsx / SGA_Adjustments!X11 (Adjustment: XPV - Board Fees, current, 2026-12)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "56cc34d02313bfd8",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.adjustment_it_integration",
+   "name": "ADJUSTMENT: IT Integration",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F30:T30"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!F30": null,
+    "Pro Forma Financials (Q1)!G30": null,
+    "Pro Forma Financials (Q1)!H30": null,
+    "Pro Forma Financials (Q1)!I30": null,
+    "Pro Forma Financials (Q1)!J30": null,
+    "Pro Forma Financials (Q1)!K30": null,
+    "Pro Forma Financials (Q1)!L30": null,
+    "Pro Forma Financials (Q1)!M30": null,
+    "Pro Forma Financials (Q1)!N30": null,
+    "Pro Forma Financials (Q1)!O30": null,
+    "Pro Forma Financials (Q1)!P30": null,
+    "Pro Forma Financials (Q1)!Q30": null,
+    "Pro Forma Financials (Q1)!R30": null,
+    "Pro Forma Financials (Q1)!S30": null,
+    "Pro Forma Financials (Q1)!T30": null
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!F30": null,
+    "Pro Forma Financials (Q1)!G30": null,
+    "Pro Forma Financials (Q1)!H30": null,
+    "Pro Forma Financials (Q1)!I30": null,
+    "Pro Forma Financials (Q1)!J30": null,
+    "Pro Forma Financials (Q1)!K30": null,
+    "Pro Forma Financials (Q1)!L30": null,
+    "Pro Forma Financials (Q1)!M30": null,
+    "Pro Forma Financials (Q1)!N30": null,
+    "Pro Forma Financials (Q1)!O30": null,
+    "Pro Forma Financials (Q1)!P30": null,
+    "Pro Forma Financials (Q1)!Q30": null,
+    "Pro Forma Financials (Q1)!R30": null,
+    "Pro Forma Financials (Q1)!S30": null,
+    "Pro Forma Financials (Q1)!T30": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "181b43b1b2665f57",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.adjustment_m_and_a",
+   "name": "ADJUSTMENT: M&A",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F31:T31"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "quarter_end_balance",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "EXECUTABLE",
+   "execution": {
+    "operation": "value_at",
+    "scale": 1,
+    "sign": -1,
+    "source": {
+     "label": "midaxo",
+     "role": "current",
+     "sheet": "sga adjustment"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!O31": 0,
+    "Pro Forma Financials (Q1)!F31": -27,
+    "Pro Forma Financials (Q1)!G31": -24,
+    "Pro Forma Financials (Q1)!H31": -21,
+    "Pro Forma Financials (Q1)!I31": -18,
+    "Pro Forma Financials (Q1)!J31": -15,
+    "Pro Forma Financials (Q1)!K31": -12,
+    "Pro Forma Financials (Q1)!L31": -9,
+    "Pro Forma Financials (Q1)!M31": -6,
+    "Pro Forma Financials (Q1)!N31": -3,
+    "Pro Forma Financials (Q1)!P31": 3,
+    "Pro Forma Financials (Q1)!Q31": 6,
+    "Pro Forma Financials (Q1)!R31": 9,
+    "Pro Forma Financials (Q1)!S31": 12,
+    "Pro Forma Financials (Q1)!T31": 15
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!O31": "reproduced",
+    "Pro Forma Financials (Q1)!F31": "inferred from layout",
+    "Pro Forma Financials (Q1)!G31": "inferred from layout",
+    "Pro Forma Financials (Q1)!H31": "inferred from layout",
+    "Pro Forma Financials (Q1)!I31": "inferred from layout",
+    "Pro Forma Financials (Q1)!J31": "inferred from layout",
+    "Pro Forma Financials (Q1)!K31": "inferred from layout",
+    "Pro Forma Financials (Q1)!L31": "inferred from layout",
+    "Pro Forma Financials (Q1)!M31": "inferred from layout",
+    "Pro Forma Financials (Q1)!N31": "inferred from layout",
+    "Pro Forma Financials (Q1)!P31": "inferred from layout",
+    "Pro Forma Financials (Q1)!Q31": "inferred from layout",
+    "Pro Forma Financials (Q1)!R31": "inferred from layout",
+    "Pro Forma Financials (Q1)!S31": "inferred from layout",
+    "Pro Forma Financials (Q1)!T31": "inferred from layout"
+   },
+   "evidence": [
+    "Pro Forma Financials (Q1)!O31 <- 2026_Consolidated_Master_File_0326_V2.xlsx / SGA_Adjustments!S27 (Midaxo, current, 2026-12)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "6f13fb16ab3413a7",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.adjustment_excess_temporary_labor",
+   "name": "ADJUSTMENT: Excess Temporary Labor",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F32:T32"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "quarter_end_balance",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "EXECUTABLE",
+   "execution": {
+    "operation": "value_at",
+    "scale": 1,
+    "sign": 1,
+    "source": {
+     "label": "memo temp labor",
+     "role": "current",
+     "sheet": "2026 actual opu"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!R32": 0,
+    "Pro Forma Financials (Q1)!F32": -36,
+    "Pro Forma Financials (Q1)!G32": -33,
+    "Pro Forma Financials (Q1)!H32": -30,
+    "Pro Forma Financials (Q1)!I32": -27,
+    "Pro Forma Financials (Q1)!J32": -24,
+    "Pro Forma Financials (Q1)!K32": -21,
+    "Pro Forma Financials (Q1)!L32": -18,
+    "Pro Forma Financials (Q1)!M32": -15,
+    "Pro Forma Financials (Q1)!N32": -12,
+    "Pro Forma Financials (Q1)!O32": -9,
+    "Pro Forma Financials (Q1)!P32": -6,
+    "Pro Forma Financials (Q1)!Q32": -3,
+    "Pro Forma Financials (Q1)!S32": 3,
+    "Pro Forma Financials (Q1)!T32": 6
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!R32": "reproduced",
+    "Pro Forma Financials (Q1)!F32": "inferred from layout",
+    "Pro Forma Financials (Q1)!G32": "inferred from layout",
+    "Pro Forma Financials (Q1)!H32": "inferred from layout",
+    "Pro Forma Financials (Q1)!I32": "inferred from layout",
+    "Pro Forma Financials (Q1)!J32": "inferred from layout",
+    "Pro Forma Financials (Q1)!K32": "inferred from layout",
+    "Pro Forma Financials (Q1)!L32": "inferred from layout",
+    "Pro Forma Financials (Q1)!M32": "inferred from layout",
+    "Pro Forma Financials (Q1)!N32": "inferred from layout",
+    "Pro Forma Financials (Q1)!O32": "inferred from layout",
+    "Pro Forma Financials (Q1)!P32": "inferred from layout",
+    "Pro Forma Financials (Q1)!Q32": "inferred from layout",
+    "Pro Forma Financials (Q1)!S32": "inferred from layout",
+    "Pro Forma Financials (Q1)!T32": "inferred from layout"
+   },
+   "evidence": [
+    "Pro Forma Financials (Q1)!R32 <- 2026_Consolidated_Master_File_0326_V2.xlsx / 2026 Actual_Opus!AB117 (Memo: Temp Labor, current, 2026-12)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "b7dacf6bd58d42e1",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.adjustment_setup_expense",
+   "name": "ADJUSTMENT: Setup Expenses",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F33:T33"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "uncertain",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!F33": null,
+    "Pro Forma Financials (Q1)!G33": null,
+    "Pro Forma Financials (Q1)!H33": null,
+    "Pro Forma Financials (Q1)!I33": null,
+    "Pro Forma Financials (Q1)!J33": null,
+    "Pro Forma Financials (Q1)!K33": null,
+    "Pro Forma Financials (Q1)!L33": null,
+    "Pro Forma Financials (Q1)!M33": null,
+    "Pro Forma Financials (Q1)!N33": null,
+    "Pro Forma Financials (Q1)!O33": null,
+    "Pro Forma Financials (Q1)!P33": null,
+    "Pro Forma Financials (Q1)!Q33": null,
+    "Pro Forma Financials (Q1)!R33": null,
+    "Pro Forma Financials (Q1)!S33": null,
+    "Pro Forma Financials (Q1)!T33": null
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!F33": null,
+    "Pro Forma Financials (Q1)!G33": null,
+    "Pro Forma Financials (Q1)!H33": null,
+    "Pro Forma Financials (Q1)!I33": null,
+    "Pro Forma Financials (Q1)!J33": null,
+    "Pro Forma Financials (Q1)!K33": null,
+    "Pro Forma Financials (Q1)!L33": null,
+    "Pro Forma Financials (Q1)!M33": null,
+    "Pro Forma Financials (Q1)!N33": null,
+    "Pro Forma Financials (Q1)!O33": null,
+    "Pro Forma Financials (Q1)!P33": null,
+    "Pro Forma Financials (Q1)!Q33": null,
+    "Pro Forma Financials (Q1)!R33": null,
+    "Pro Forma Financials (Q1)!S33": null,
+    "Pro Forma Financials (Q1)!T33": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "95b7c83d1151afaf",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.adjustment_other",
+   "name": "ADJUSTMENT: Other",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F34:T34"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "quarter_end_balance",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "EXECUTABLE",
+   "execution": {
+    "operation": "value_at",
+    "scale": 1,
+    "sign": 1,
+    "source": {
+     "label": "",
+     "role": "current",
+     "sheet": "2026 actual opu"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!R34": 0,
+    "Pro Forma Financials (Q1)!F34": -36,
+    "Pro Forma Financials (Q1)!G34": -33,
+    "Pro Forma Financials (Q1)!H34": -30,
+    "Pro Forma Financials (Q1)!I34": -27,
+    "Pro Forma Financials (Q1)!J34": -24,
+    "Pro Forma Financials (Q1)!K34": -21,
+    "Pro Forma Financials (Q1)!L34": -18,
+    "Pro Forma Financials (Q1)!M34": -15,
+    "Pro Forma Financials (Q1)!N34": -12,
+    "Pro Forma Financials (Q1)!O34": -9,
+    "Pro Forma Financials (Q1)!P34": -6,
+    "Pro Forma Financials (Q1)!Q34": -3,
+    "Pro Forma Financials (Q1)!S34": 3,
+    "Pro Forma Financials (Q1)!T34": 6
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!R34": "reproduced",
+    "Pro Forma Financials (Q1)!F34": "inferred from layout",
+    "Pro Forma Financials (Q1)!G34": "inferred from layout",
+    "Pro Forma Financials (Q1)!H34": "inferred from layout",
+    "Pro Forma Financials (Q1)!I34": "inferred from layout",
+    "Pro Forma Financials (Q1)!J34": "inferred from layout",
+    "Pro Forma Financials (Q1)!K34": "inferred from layout",
+    "Pro Forma Financials (Q1)!L34": "inferred from layout",
+    "Pro Forma Financials (Q1)!M34": "inferred from layout",
+    "Pro Forma Financials (Q1)!N34": "inferred from layout",
+    "Pro Forma Financials (Q1)!O34": "inferred from layout",
+    "Pro Forma Financials (Q1)!P34": "inferred from layout",
+    "Pro Forma Financials (Q1)!Q34": "inferred from layout",
+    "Pro Forma Financials (Q1)!S34": "inferred from layout",
+    "Pro Forma Financials (Q1)!T34": "inferred from layout"
+   },
+   "evidence": [
+    "Pro Forma Financials (Q1)!R34 <- 2026_Consolidated_Master_File_0326_V2.xlsx / 2026 Actual_Opus!AB118 (?, current, 2026-12)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "8e036a5dece32e88",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.adjustment_cental_office_administration",
+   "name": "ADJUSTMENT: Cental Office Administration...",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F35"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!F35": null
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!F35": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "255077238494019a",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.adjustment_yeary_control_normalized_ad",
+   "name": "ADJUSTMENT: Yeary Controls Normalized Ad...",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!F36:O36"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!F36": null,
+    "Pro Forma Financials (Q1)!G36": null,
+    "Pro Forma Financials (Q1)!H36": null,
+    "Pro Forma Financials (Q1)!I36": null,
+    "Pro Forma Financials (Q1)!J36": null,
+    "Pro Forma Financials (Q1)!K36": null,
+    "Pro Forma Financials (Q1)!L36": null,
+    "Pro Forma Financials (Q1)!M36": null,
+    "Pro Forma Financials (Q1)!N36": null,
+    "Pro Forma Financials (Q1)!O36": null
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!F36": null,
+    "Pro Forma Financials (Q1)!G36": null,
+    "Pro Forma Financials (Q1)!H36": null,
+    "Pro Forma Financials (Q1)!I36": null,
+    "Pro Forma Financials (Q1)!J36": null,
+    "Pro Forma Financials (Q1)!K36": null,
+    "Pro Forma Financials (Q1)!L36": null,
+    "Pro Forma Financials (Q1)!M36": null,
+    "Pro Forma Financials (Q1)!N36": null,
+    "Pro Forma Financials (Q1)!O36": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "8606361284789e52",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.opu_cash",
+   "name": "Opus Cash",
+   "entity": "Opus Water",
+   "targets": [
+    "Pro Forma Financials (Q1)!Q45",
+    "Pro Forma Financials (Q1)!T45"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "uncertain",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Pro Forma Financials (Q1)!Q45": null,
+    "Pro Forma Financials (Q1)!T45": null
+   },
+   "offset_basis": {
+    "Pro Forma Financials (Q1)!Q45": null,
+    "Pro Forma Financials (Q1)!T45": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "c255435430f8f018",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "cap.exercise_price",
+   "name": "Exercise prices>>>",
+   "entity": "Opus Water",
+   "targets": [
+    "Cap Table (Mar 2026)!F9:G9",
+    "Cap Table (Dec 2025)!F9:G9"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Cap Table (Mar 2026)!F9": null,
+    "Cap Table (Mar 2026)!G9": null,
+    "Cap Table (Dec 2025)!F9": null,
+    "Cap Table (Dec 2025)!G9": null
+   },
+   "offset_basis": {
+    "Cap Table (Mar 2026)!F9": null,
+    "Cap Table (Mar 2026)!G9": null,
+    "Cap Table (Dec 2025)!F9": null,
+    "Cap Table (Dec 2025)!G9": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "a9eb54ef8bcf2ca7",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "cap.xpv_water_fund_iii_limited_partnership",
+   "name": "XPV Water Fund III Limited Partnership",
+   "entity": "Opus Water",
+   "targets": [
+    "Cap Table (Mar 2026)!E10",
+    "Cap Table (Dec 2025)!E10"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Cap Table (Mar 2026)!E10": null,
+    "Cap Table (Dec 2025)!E10": null
+   },
+   "offset_basis": {
+    "Cap Table (Mar 2026)!E10": null,
+    "Cap Table (Dec 2025)!E10": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "d4b3a6672eefb3e2",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "cap.2007_irrevocable_trust_for_family_of_chr",
+   "name": "2007 Irrevocable Trust For Family of Chr...",
+   "entity": "Opus Water",
+   "targets": [
+    "Cap Table (Mar 2026)!E11",
+    "Cap Table (Mar 2026)!G15",
+    "Cap Table (Dec 2025)!E11",
+    "Cap Table (Dec 2025)!G15"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Cap Table (Mar 2026)!E11": null,
+    "Cap Table (Mar 2026)!G15": null,
+    "Cap Table (Dec 2025)!E11": null,
+    "Cap Table (Dec 2025)!G15": null
+   },
+   "offset_basis": {
+    "Cap Table (Mar 2026)!E11": null,
+    "Cap Table (Mar 2026)!G15": null,
+    "Cap Table (Dec 2025)!E11": null,
+    "Cap Table (Dec 2025)!G15": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "c2d66a7216f0367c",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "cap.karl_trott",
+   "name": "Karl Trott",
+   "entity": "Opus Water",
+   "targets": [
+    "Cap Table (Mar 2026)!E12",
+    "Cap Table (Dec 2025)!E12"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Cap Table (Mar 2026)!E12": null,
+    "Cap Table (Dec 2025)!E12": null
+   },
+   "offset_basis": {
+    "Cap Table (Mar 2026)!E12": null,
+    "Cap Table (Dec 2025)!E12": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "af19f82ec4a949d7",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "cap.john_deyarman_incentive_unit",
+   "name": "John DeYarman Incentive Units",
+   "entity": "Opus Water",
+   "targets": [
+    "Cap Table (Mar 2026)!F13:G13",
+    "Cap Table (Dec 2025)!F13:G13"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Cap Table (Mar 2026)!F13": null,
+    "Cap Table (Mar 2026)!G13": null,
+    "Cap Table (Dec 2025)!F13": null,
+    "Cap Table (Dec 2025)!G13": null
+   },
+   "offset_basis": {
+    "Cap Table (Mar 2026)!F13": null,
+    "Cap Table (Mar 2026)!G13": null,
+    "Cap Table (Dec 2025)!F13": null,
+    "Cap Table (Dec 2025)!G13": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "09d8be0633d3ea14",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "cap.scott_day_incentive_unit",
+   "name": "Scott Day Incentive Units",
+   "entity": "Opus Water",
+   "targets": [
+    "Cap Table (Mar 2026)!G14",
+    "Cap Table (Dec 2025)!G14"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": {
+    "operation": "value_at",
+    "scale": 1,
+    "sign": 1,
+    "source": {
+     "label": "miscellaneou spare repair part",
+     "role": "current",
+     "sheet": "order detail strainer hx"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Cap Table (Mar 2026)!G14": -3,
+    "Cap Table (Dec 2025)!G14": -3
+   },
+   "offset_basis": {
+    "Cap Table (Mar 2026)!G14": "reproduced",
+    "Cap Table (Dec 2025)!G14": "reproduced"
+   },
+   "evidence": [
+    "Cap Table (Mar 2026)!G14 <- 2026_Consolidated_Master_File_0326_V2.xlsx / Order Detail_Strainers_HX!M7 (Miscellaneous Spare/Repair Parts, current, 2026-09)",
+    "Cap Table (Dec 2025)!G14 <- 2026_Consolidated_Master_File_0326_V2.xlsx / Order Detail_Strainers_HX!M7 (Miscellaneous Spare/Repair Parts, current, 2026-09)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "afa0591f393a148e",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "cap.kevin_klau",
+   "name": "Kevin Klau",
+   "entity": "Opus Water",
+   "targets": [
+    "Cap Table (Mar 2026)!G16",
+    "Cap Table (Dec 2025)!G16"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Cap Table (Mar 2026)!G16": null,
+    "Cap Table (Dec 2025)!G16": null
+   },
+   "offset_basis": {
+    "Cap Table (Mar 2026)!G16": null,
+    "Cap Table (Dec 2025)!G16": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "700a0810cb351f68",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "cap.security_type",
+   "name": "Security Type",
+   "entity": "Opus Water",
+   "targets": [
+    "IRR Calculation (Mar 2026)!I5:J5"
+   ],
+   "write_mode": "carry_forward_event_driven",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "IRR Calculation (Mar 2026)!I5": null,
+    "IRR Calculation (Mar 2026)!J5": null
+   },
+   "offset_basis": {
+    "IRR Calculation (Mar 2026)!I5": null,
+    "IRR Calculation (Mar 2026)!J5": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "6ffd9c34a9b81810",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "unk.common",
+   "name": "Common",
+   "entity": "Opus Water",
+   "targets": [
+    "IRR Calculation (Mar 2026)!I8"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "uncertain",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Meaning unknown: what does this input represent, where does it come from, and how often does it change?"
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "IRR Calculation (Mar 2026)!I8": null
+   },
+   "offset_basis": {
+    "IRR Calculation (Mar 2026)!I8": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "90532420b5a9ccea",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "unk.unrealized_value",
+   "name": "Unrealized Value",
+   "entity": "Opus Water",
+   "targets": [
+    "IRR Calculation (Mar 2026)!J12"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "uncertain",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Meaning unknown: what does this input represent, where does it come from, and how often does it change?"
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "IRR Calculation (Mar 2026)!J12": null
+   },
+   "offset_basis": {
+    "IRR Calculation (Mar 2026)!J12": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "702f75f32d6f32f0",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.opu_revenue",
+   "name": "Opus Revenue",
+   "entity": "Opus Water",
+   "targets": [
+    "Financial Summary!T9:AE9"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "uncertain",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Financial Summary!T9": null,
+    "Financial Summary!U9": null,
+    "Financial Summary!V9": null,
+    "Financial Summary!W9": null,
+    "Financial Summary!X9": null,
+    "Financial Summary!Y9": null,
+    "Financial Summary!Z9": null,
+    "Financial Summary!AA9": null,
+    "Financial Summary!AB9": null,
+    "Financial Summary!AC9": null,
+    "Financial Summary!AD9": null,
+    "Financial Summary!AE9": null
+   },
+   "offset_basis": {
+    "Financial Summary!T9": null,
+    "Financial Summary!U9": null,
+    "Financial Summary!V9": null,
+    "Financial Summary!W9": null,
+    "Financial Summary!X9": null,
+    "Financial Summary!Y9": null,
+    "Financial Summary!Z9": null,
+    "Financial Summary!AA9": null,
+    "Financial Summary!AB9": null,
+    "Financial Summary!AC9": null,
+    "Financial Summary!AD9": null,
+    "Financial Summary!AE9": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "05f9f70ab03179cd",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "fs.debt",
+   "name": "Debt",
+   "entity": "Opus Water",
+   "targets": [
+    "Financial Summary!I60"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "uncertain",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "carry_forward_and_flag",
+   "notes": null,
+   "questions": [
+    "Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand."
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Financial Summary!I60": null
+   },
+   "offset_basis": {
+    "Financial Summary!I60": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "6b0536ed3b335c0b",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  }
+ ]
+}

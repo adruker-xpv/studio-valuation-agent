@@ -1,0 +1,346 @@
+{
+ "version": 2,
+ "workbook": "base_q2.xlsx",
+ "generated": "2026-09-29",
+ "status": "READY_FOR_REPLAY",
+ "template_fingerprint": "f9a021d66fe22645",
+ "period_end": "2026-06",
+ "fiscal_year_start_month": 1,
+ "key_outputs": [
+  "Valuation!B5"
+ ],
+ "concepts": [
+  {
+   "concept_id": "is.revenue",
+   "name": "Revenue",
+   "entity": "Test Co",
+   "targets": [
+    "Quarterly!B2:E2"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "quarter_sum_of_months",
+   "source_filename_pattern": "src_q<N>_statements.xlsx",
+   "reconciliation_rule": "months sum to quarter",
+   "missing_source_behavior": "block_and_flag",
+   "notes": "feeds Valuation!B5 via Quarterly!B5",
+   "questions": null,
+   "status": "EXECUTABLE",
+   "execution": {
+    "months": 3,
+    "operation": "sum_months",
+    "scale": 0.001,
+    "sign": 1,
+    "source": {
+     "label": "net sales",
+     "role": "current",
+     "sheet": "income statement"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Quarterly!B2": -9,
+    "Quarterly!C2": -6,
+    "Quarterly!D2": -3,
+    "Quarterly!E2": 0
+   },
+   "offset_basis": {
+    "Quarterly!B2": "reproduced",
+    "Quarterly!C2": "reproduced",
+    "Quarterly!D2": "reproduced",
+    "Quarterly!E2": "reproduced"
+   },
+   "evidence": [
+    "Quarterly!B2 <- src_q2_statements.xlsx / Income Statement!B2 (Net Sales, current, 2025-07); src_q2_statements.xlsx / Income Statement!C2 (Net Sales, current, 2025-08); src_q2_statements.xlsx / Income Statement!D2 (Net Sales, current, 2025-09)",
+    "Quarterly!C2 <- src_q2_statements.xlsx / Income Statement!E2 (Net Sales, current, 2025-10); src_q2_statements.xlsx / Income Statement!F2 (Net Sales, current, 2025-11); src_q2_statements.xlsx / Income Statement!G2 (Net Sales, current, 2025-12)",
+    "Quarterly!D2 <- src_q2_statements.xlsx / Income Statement!H2 (Net Sales, current, 2026-01); src_q2_statements.xlsx / Income Statement!I2 (Net Sales, current, 2026-02); src_q2_statements.xlsx / Income Statement!J2 (Net Sales, current, 2026-03)",
+    "Quarterly!E2 <- src_q2_statements.xlsx / Income Statement!K2 (Net Sales, current, 2026-04); src_q2_statements.xlsx / Income Statement!L2 (Net Sales, current, 2026-05); src_q2_statements.xlsx / Income Statement!M2 (Net Sales, current, 2026-06)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "a1a3566585d2a0a2",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "is.cogs",
+   "name": "COGS",
+   "entity": "Test Co",
+   "targets": [
+    "Quarterly!B3:E3"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "quarter_sum_of_months",
+   "source_filename_pattern": "src_q<N>_statements.xlsx",
+   "reconciliation_rule": "months sum to quarter",
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": null,
+   "status": "EXECUTABLE",
+   "execution": {
+    "months": 3,
+    "operation": "sum_months",
+    "scale": 0.001,
+    "sign": 1,
+    "source": {
+     "label": "cost of goods sold",
+     "role": "current",
+     "sheet": "income statement"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Quarterly!B3": -9,
+    "Quarterly!C3": -6,
+    "Quarterly!D3": -3,
+    "Quarterly!E3": 0
+   },
+   "offset_basis": {
+    "Quarterly!B3": "reproduced",
+    "Quarterly!C3": "reproduced",
+    "Quarterly!D3": "reproduced",
+    "Quarterly!E3": "reproduced"
+   },
+   "evidence": [
+    "Quarterly!B3 <- src_q2_statements.xlsx / Income Statement!B3 (Cost of goods sold, current, 2025-07); src_q2_statements.xlsx / Income Statement!C3 (Cost of goods sold, current, 2025-08); src_q2_statements.xlsx / Income Statement!D3 (Cost of goods sold, current, 2025-09)",
+    "Quarterly!C3 <- src_q2_statements.xlsx / Income Statement!E3 (Cost of goods sold, current, 2025-10); src_q2_statements.xlsx / Income Statement!F3 (Cost of goods sold, current, 2025-11); src_q2_statements.xlsx / Income Statement!G3 (Cost of goods sold, current, 2025-12)",
+    "Quarterly!D3 <- src_q2_statements.xlsx / Income Statement!H3 (Cost of goods sold, current, 2026-01); src_q2_statements.xlsx / Income Statement!I3 (Cost of goods sold, current, 2026-02); src_q2_statements.xlsx / Income Statement!J3 (Cost of goods sold, current, 2026-03)",
+    "Quarterly!E3 <- src_q2_statements.xlsx / Income Statement!K3 (Cost of goods sold, current, 2026-04); src_q2_statements.xlsx / Income Statement!L3 (Cost of goods sold, current, 2026-05); src_q2_statements.xlsx / Income Statement!M3 (Cost of goods sold, current, 2026-06)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "12345b97934f67b2",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "is.sga",
+   "name": "SG&A",
+   "entity": "Test Co",
+   "targets": [
+    "Quarterly!B4:E4"
+   ],
+   "write_mode": "roll_window",
+   "period_rule": "quarter_sum_of_months",
+   "source_filename_pattern": "src_q<N>_statements.xlsx",
+   "reconciliation_rule": "months sum to quarter",
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": null,
+   "status": "EXECUTABLE",
+   "execution": {
+    "months": 3,
+    "operation": "sum_months",
+    "scale": 0.001,
+    "sign": 1,
+    "source": {
+     "label": "sg and a expense",
+     "role": "current",
+     "sheet": "income statement"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Quarterly!B4": -9,
+    "Quarterly!C4": -6,
+    "Quarterly!D4": -3,
+    "Quarterly!E4": 0
+   },
+   "offset_basis": {
+    "Quarterly!B4": "reproduced",
+    "Quarterly!C4": "reproduced",
+    "Quarterly!D4": "reproduced",
+    "Quarterly!E4": "reproduced"
+   },
+   "evidence": [
+    "Quarterly!B4 <- src_q2_statements.xlsx / Income Statement!B4 (SG&A expense, current, 2025-07); src_q2_statements.xlsx / Income Statement!C4 (SG&A expense, current, 2025-08); src_q2_statements.xlsx / Income Statement!D4 (SG&A expense, current, 2025-09)",
+    "Quarterly!C4 <- src_q2_statements.xlsx / Income Statement!E4 (SG&A expense, current, 2025-10); src_q2_statements.xlsx / Income Statement!F4 (SG&A expense, current, 2025-11); src_q2_statements.xlsx / Income Statement!G4 (SG&A expense, current, 2025-12)",
+    "Quarterly!D4 <- src_q2_statements.xlsx / Income Statement!H4 (SG&A expense, current, 2026-01); src_q2_statements.xlsx / Income Statement!I4 (SG&A expense, current, 2026-02); src_q2_statements.xlsx / Income Statement!J4 (SG&A expense, current, 2026-03)",
+    "Quarterly!E4 <- src_q2_statements.xlsx / Income Statement!K4 (SG&A expense, current, 2026-04); src_q2_statements.xlsx / Income Statement!L4 (SG&A expense, current, 2026-05); src_q2_statements.xlsx / Income Statement!M4 (SG&A expense, current, 2026-06)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "1bdfb288e60f48b5",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "bs.net_debt",
+   "name": "Net debt",
+   "entity": "Test Co",
+   "targets": [
+    "Valuation!B3"
+   ],
+   "write_mode": "replace_period_value",
+   "period_rule": "quarter_end_balance",
+   "source_filename_pattern": "src_q<N>_statements.xlsx",
+   "reconciliation_rule": "months sum to quarter",
+   "missing_source_behavior": "block_and_flag",
+   "notes": null,
+   "questions": null,
+   "status": "EXECUTABLE",
+   "execution": {
+    "operation": "value_at",
+    "scale": 0.001,
+    "sign": 1,
+    "source": {
+     "label": "net debt",
+     "role": "current",
+     "sheet": "balance sheet"
+    }
+   },
+   "execution_source": "discovered by reproduction",
+   "cell_offsets_months": {
+    "Valuation!B3": 0
+   },
+   "offset_basis": {
+    "Valuation!B3": "reproduced"
+   },
+   "evidence": [
+    "Valuation!B3 <- src_q2_statements.xlsx / Balance Sheet!B4 (Net debt, current, 2026-06)"
+   ],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "ef7e5f13f2241936",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "adj.addbacks",
+   "name": "One-off add-backs",
+   "entity": null,
+   "targets": [
+    "Adjustments!B1"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "point_in_time",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "manual_input",
+   "notes": null,
+   "questions": [
+    "Where do add-backs come from each quarter?"
+   ],
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Adjustments!B1": null
+   },
+   "offset_basis": {
+    "Adjustments!B1": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "b19574fcbee32e6d",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.multiple",
+   "name": "EV/EBITDA multiple",
+   "entity": null,
+   "targets": [
+    "Inputs!B3"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "point_in_time",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "manual_input",
+   "notes": null,
+   "questions": null,
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Inputs!B3": null
+   },
+   "offset_basis": {
+    "Inputs!B3": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "359b4171065d3775",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.discount",
+   "name": "Illiquidity discount",
+   "entity": null,
+   "targets": [
+    "Inputs!B4"
+   ],
+   "write_mode": "carry_forward",
+   "period_rule": "not_periodic",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "manual_input",
+   "notes": null,
+   "questions": null,
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Inputs!B4": null
+   },
+   "offset_basis": {
+    "Inputs!B4": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "bf07f1cff6f4b768",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  },
+  {
+   "concept_id": "asm.adj_factor",
+   "name": "Adjustment factor",
+   "entity": null,
+   "targets": [
+    "Inputs!B6"
+   ],
+   "write_mode": "manual_input",
+   "period_rule": "point_in_time",
+   "source_filename_pattern": null,
+   "reconciliation_rule": null,
+   "missing_source_behavior": "manual_input",
+   "notes": null,
+   "questions": null,
+   "status": "MANUAL",
+   "execution": null,
+   "execution_source": null,
+   "cell_offsets_months": {
+    "Inputs!B6": null
+   },
+   "offset_basis": {
+    "Inputs!B6": null
+   },
+   "evidence": [],
+   "formula_preservation": "write hardcoded input cells only; never overwrite formulas",
+   "approval_basis_hash": "1304908adf2067d3",
+   "approval": {
+    "status": "not_reviewed",
+    "approved_by": null,
+    "date": null
+   }
+  }
+ ]
+}

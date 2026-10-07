@@ -1,0 +1,107 @@
+{
+ "company_id": "opus-water",
+ "display_name": "Opus Water",
+ "profile_version": 1,
+ "profile_hash": "c082afda754c5c6e",
+ "status": "REVIEW_REQUIRED",
+ "period_end": "2026-12",
+ "review": {
+  "approved_by": "Aria Druker",
+  "approved_on": "2026-10-06",
+  "profile_version": 1
+ },
+ "onboarded_from": {
+  "workbook": "/app/uploads/2026_Q1_-_Opus_Water_-_Valuation_Workbook_DRAFT-be38ab53.xlsx",
+  "statements": [
+   "/app/uploads/2026_Consolidated_Master_File_0126-ec169598.xlsx",
+   "/app/uploads/2026_Consolidated_Master_File_0226-a67fb280.xlsx",
+   "/app/uploads/2026_Consolidated_Master_File_0326_V2-35593cf1.xlsx"
+  ],
+  "period_end": null,
+  "date": "2026-10-06"
+ },
+ "open_items": [
+  "IRR Calculation (Mar 2026)!I8 (Common): Meaning unknown: what does this input represent, where does it come from, and how often does it change?",
+  "IRR Calculation (Mar 2026)!J12 (Unrealized Value): Meaning unknown: what does this input represent, where does it come from, and how often does it change?",
+  "Pro Forma Financials (Q1)!F21:T21 (Opus Water EBITDA): Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand.",
+  "Pro Forma Financials (Q1)!F22:G22 (RP Adams EBITDA): Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand.",
+  "Pro Forma Financials (Q1)!F23:O23 (Yeary Controls EBITDA): Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand.",
+  "Pro Forma Financials (Q1)!F33:T33 (ADJUSTMENT: Setup Expenses): Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand.",
+  "Pro Forma Financials (Q1)!Q45 (Opus Cash): Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand.",
+  "Pro Forma Financials (Q1)!T45 (Opus Cash): Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand.",
+  "Financial Summary!T9:AE9 (Opus Revenue): Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand.",
+  "Financial Summary!I60 (Debt): Expected in the statements, but no rule reproduces it: name the statement line, or confirm it is entered by hand.",
+  "III. Valuation Summary!F42 (Change in Valuation Methodology): meaning unresolved: assumption. Change in Valuation Methodology is an analyst-set flag indicating whether methodology changed this p",
+  "ADJUSTMENT: Recruiting Costs (Pro Forma Financials (Q1)!F28:T28): rule proven by one number only, from a differently named line 'stud bolt sa 193b7 10 x 8 lg zn ni': confirm it is the right source",
+  "ADJUSTMENT: M&A (Pro Forma Financials (Q1)!F31:T31): rule proven by one number only, from a differently named line 'midaxo': confirm it is the right source",
+  "ADJUSTMENT: Excess Temporary Labor (Pro Forma Financials (Q1)!F32:T32): rule proven by one number only, from a differently named line 'memo temp labor': confirm it is the right source",
+  "Debt (III. Valuation Summary!K14): Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this).",
+  "Impact of Multiple (III. Valuation Summary!H37, III. Valuation Summary!K37): Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this).",
+  "Impact of EBITDA (III. Valuation Summary!H38, III. Valuation Summary!K38): Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this).",
+  "Impact of Net Cash (III. Valuation Summary!H39, III. Valuation Summary!K39): Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this).",
+  "Impact of FX (III. Valuation Summary!H40, III. Valuation Summary!K40): Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this).",
+  "Change in Ownership (III. Valuation Summary!H41, III. Valuation Summary!K41): Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this).",
+  "Change in Valuation Methodology (III. Valuation Summary!H42, III. Valuation Summary!K42): Prior-period value: in a refresh it should become last quarter's current value. Confirm which current-period cell it comes from (a backtest will test this).",
+  "manual inputs each quarter: 13 values carried forward and flagged unless given: Debt, Impact of Multiple, Impact of EBITDA, Impact of Net Cash, Impact of FX, Impact of FX, Change in Ownership, Change in Valuation Methodology, Change in Valuation Methodology, ADJUSTMENT: Consulting, ADJUSTMENT: IT Integration, ADJUSTMENT: Cental Office Administration...",
+  "statement pack: 2026_Consolidated_Master_File_0126.xlsx: 1506 numbers are under month headers with no year; they are not used",
+  "statement pack: 2026_Consolidated_Master_File_0226.xlsx: 1506 numbers are under month headers with no year; they are not used",
+  "statement pack: 2026_Consolidated_Master_File_0326_V2.xlsx: 206 numbers are under month headers with no year; they are not used"
+ ],
+ "decisions": [
+  {
+   "id": 1,
+   "date": "2026-10-06",
+   "period": "2026-Q4",
+   "kind": "classification",
+   "item": "cell:III. Valuation Summary!F42",
+   "change": {
+    "type": "assumption"
+   },
+   "said": "AI classified III. Valuation Summary!F42 as assumption (medium)",
+   "by": "agent",
+   "status": "confirmed",
+   "confirmed_by": "Aria Druker"
+  },
+  {
+   "id": 2,
+   "date": "2026-10-06",
+   "period": "2026-Q4",
+   "kind": "classification",
+   "item": "cell:IRR Calculation (Mar 2026)!I8",
+   "change": {
+    "type": "uncertain"
+   },
+   "said": "AI classified IRR Calculation (Mar 2026)!I8 as uncertain (low)",
+   "by": "agent",
+   "status": "confirmed",
+   "confirmed_by": "Aria Druker"
+  },
+  {
+   "id": 3,
+   "date": "2026-10-06",
+   "period": "2026-Q4",
+   "kind": "classification",
+   "item": "cell:IRR Calculation (Mar 2026)!J12",
+   "change": {
+    "type": "uncertain"
+   },
+   "said": "AI classified IRR Calculation (Mar 2026)!J12 as uncertain (low)",
+   "by": "agent",
+   "status": "confirmed",
+   "confirmed_by": "Aria Druker"
+  },
+  {
+   "id": 4,
+   "date": "2026-10-06",
+   "period": "2026-Q4",
+   "kind": "approval",
+   "item": "profile",
+   "change": {
+    "profile_version": 1
+   },
+   "said": "I approve everything as is.",
+   "by": "Aria Druker",
+   "status": "active"
+  }
+ ]
+}
