@@ -1,16 +1,16 @@
 {
  "files": {
-  "CHANGELOG.md": "460fc3a0d19a2b7aa44d9125ee712321ed07c77b2fe0c4c5321bfdb2fbff8752",
-  "MAINTAINERS.md": "afed6743bb2891685d1acab5875a9ac2cc8d0aeeed3847c8cd4feab24d79a341",
-  "SKILL.md": "7b9f72adece0f02f92fa5d86d17d0906a13dbcb243953d45b1af5f36c1f21e83",
+  "CHANGELOG.md": "48764e5dedd23d2dab403d4f4eebd9d492478ba97aa2d38bdcd13a1011fb50da",
+  "MAINTAINERS.md": "b8c2a4b25795c2597c3e1f8089ffea06b008e8081df3815336562a65d66e6f45",
+  "SKILL.md": "6295973ebf0c7a8d4af2778fa7d3012f47c2b0d4283a9f85361e09ff5794834b",
   "benchmark/bench.py": "9ea69ed0ccb7d69625fc7427c4baa57392fb5da727b7fa82a991b2f506aa5f77",
   "benchmark/xmlcount.py": "f072a065c56c868643c93d6864fcd31fe4db251a7b9fd4dc99771cb8dc01517b",
   "common/cellfmt.py": "c92ec2cbe7643049980498f944f86b344872286617d9a3d75038b490f7df7052",
-  "common/files.py": "fece6ac07d22615438390115fbee68cb88e1571f164301f97b0891f4256a762d",
+  "common/files.py": "63621c832432d0a4804acf0b2153a17f7f04e772ec229b023e4e3b76df74a149",
   "common/forms.py": "5d3c3a46084a01b32371ab983e820243299e028d5ed7ca1ed473bbabcb88cfe1",
   "common/preflight.py": "cef846cf21152a38a5291dbfdebcb8f8e2213ea106e12372a8be1be9e93f8aac",
   "common/schema.py": "367c35fd70e00b5ffcc4f9f33760804a884463dfbad9b2793fc8dd84224ce298",
-  "common/util.py": "3a9f753dfd6376b54ceac870228abad1d9ba869b89b410be616d77e6c3bb11a6",
+  "common/util.py": "4003995f20df1396f654198e6e07eebc362603e15f08536ee1d2e9c1112f2ab7",
   "discovery/discover.py": "2cbd7c9eec35d02d4bdedace134bb0a55a34e7ecdef444cae6cb56d99a3e2001",
   "discovery/graph.py": "a31b785dfb28708e38b826b0c51f4852e554c50586f015e7399ced541cceb903",
   "discovery/invariants.py": "f7e9f9705fd4e0ad568af8a804e1582e125f120a0a589592c62c4c4012d2f31a",
@@ -39,7 +39,7 @@
   "docs/stage0-counting-and-status-rules.md": "d493c4590ed88c485d4d34d3632dec7cc93598876754a12ad90fc6d30d8c85c9",
   "office-scripts/excel-export.ts": "0da2c32b2e94acf81be376067d6311c8987d5a136374c90bc36a0a5cad3a7243",
   "tests/dfixtures.py": "6056c4c4f3d62bee795f7d69f4ff63780f89ab7f48155c86fdefb92ccabd5936",
-  "tests/run_tests.py": "78bb58e118deb3b9171edc09890d641fe824d66933fb0c20fc298d89c8240ea7",
+  "tests/run_tests.py": "350ac79d1cd44d1784ff8e641012bf6885be4b65efadb8d196e47ac5900e6ac7",
   "tests/vp_fixtures.py": "a0150477f51fa34f0039b6d42cc21866efeccf965ba33b9a606aca6cf9b8bd2b",
   "tools/check_package.py": "7feabbc714ba36e9afb436e7c2074ee3be4786b041c157bff72000f26c50c43b",
   "tools/demo.py": "e5a1ad4aba17790e73bb2d11e64ad09b6685ff6fc132285fb78512c7d24d2160",
@@ -48,7 +48,7 @@
  },
  "package": "workbook-discovery",
  "package_check": "CHECK: 54 entries | 0 deny-listed terms | PASS",
- "tests": "ALL TESTS: PASS (39/39)",
- "version": "11.6.0",
- "zip_sha256": "b894f91ac63883b255250af796abe977bf17edba53e1ba137de7bff42f32d8ed"
+ "tests": "ALL TESTS: PASS (40/40)",
+ "version": "11.6.1",
+ "zip_sha256": "2b51fa4b9e91ae816a76d98b95ca5bd31d95b0156625094436c8a6585ca0c8e7"
 }

@@ -1,4 +1,4 @@
-# Stage 0 – counting and status rules (rules R1 / P1 / I1, build 11.5) – for sign-off before the first Gold run
+# Stage 0 – counting and status rules (rules R1 / P1 / I1 / C1, build 11.7) – for sign-off before the first Gold run
 
 These rules define what "found", "formula", "dependency", "region", "complete" and each status mean. The code implements
 them; changing any rule changes its version (R2, P2 …) and the benchmark reports it as a **method change**, never as an
@@ -106,19 +106,35 @@ material formula lacks a saved value; INV-07 no material formula's saved value d
 INV-08 total assets = total liabilities + total equity in every month of a balance-sheet block. Each: HOLDS / VIOLATED /
 NOT_APPLICABLE / NOT_EVALUATED. A violated invariant is a gate. Per-company changes are named profiles, recorded in the map.
 
-## 6. Answer key
-Provenance per entry: `blind` (before any discovery output), `confirmed_after_proposal` (the analyst classified something
-discovery proposed, e.g. an unreached region), `corrected`, `analyst_added`, `excel` (counts and precedents from Excel).
-The key is bound to the workbook's SHA-256 and hashed itself; blind answers are frozen with a timestamp before the first
-discovery run, and the key builder refuses a discovery run older than that freeze.
+## 6. Independent answers (build 11.6)
+**File contents:** Excel's own export (`excel-export.ts`) of every cell - sheet, cell, formula as Excel shows it, value
+(dates as Excel serial numbers), type (number, text, boolean, error) - and, for the first cell of each distinct formula
+pattern (R1C1), the cells Excel says it uses. The program writes the same columns; the two are compared cell by cell
+(numbers within 1 part in 10^9). A reference the program misses counts as "missed but flagged" only when the program's own
+flag explains a missing reference (could not read, deleted, computed at calculation time, another workbook) - never
+"over-approximated", which explains only extra references.
+**Meaning:** the analyst's form - five key numbers (sheet and the cell holding the number), the first and last month of the
+earnings figure, the method, and labelled areas (current quarter's valuation, monthly figures used, old history, scratch,
+presentation, not sure). check-form refuses label cells, unknown sheets and badly written months; save-answers records
+the answers with the time and their own hash, bound to the workbook's fingerprint.
+**Confidently wrong:** a key number, month or labelled-area cell month where the program said PROVEN and the analyst
+disagrees. It must be 0.
 
-**Sample (frozen once):** drawn from the physical inventory only, by these strata: formula reading another sheet; formula
-reading only its sheet; formula with a range; lookup / conditional / dynamic function; aggregate function; formula reading
-another workbook; formula using a defined name; formula without a saved value; shared-formula member; array / spill
-formula; typed number another sheet reads; typed number a same-sheet formula reads; error cell. Seed fixed; 3 per stratum;
-at most 45.
+## 7. Chain-first key numbers (rules C1, build 11.7)
+An **EV option** is a formula that is a product of exactly one earnings figure (|value| >= 1,000) and one multiple (0.1 to
+100, not labelled a weight), or a weighted sum of such products. Following the formula graph downstream: the **equity
+bridge** is an additive formula using EV with a plus sign and at least one other term (never one that subtracts a cell on
+EV's own row - that is a comparison); **XPV's value** is the anchor-matched formula downstream of equity, else a product of
+equity and a share (0 to 1). Rules, in order, the first that applies being the recorded reason: an Excel error in its
+inputs; a count is never a multiple; a product of another chain's equity is an ownership step; the earnings figure ends in
+another month; it does not lead to the reported value (when the fund workbook is given); a chain dated to the requested
+month beats one of unknown period; a complete chain beats an incomplete one. One survivor: PROVEN if complete and it reaches
+the reported value or its earnings figure is proven for the requested month (and no stale value, and not unanchored), else
+SUPPORTED. Several: AMBIGUOUS, nothing chosen. A saved value that does not match its formula is flagged, never a rejection.
+**Anchor:** the reported value matches a cell within the value's own rounding (26,281,000 -> +/- 500; 26,280,918 -> +/- 1),
+directly or through an FX-rate cell; typed matches are copies.
 
-## 7. Passing criteria (milestone 1)
+## 8. Passing criteria (milestone 1)
 Physical import PASS: every physical count equals Excel's. Material graph PASS: every Gold output found; no silent
 omission in the sample; no PROVEN-but-wrong; no false certainty; every Gold material region reached; every formula
 carries its flags. Completeness gates (open items, never averaged): outputs not fully known, truncated or circular
