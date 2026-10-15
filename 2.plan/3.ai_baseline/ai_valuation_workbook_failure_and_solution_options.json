@@ -1,0 +1,289 @@
+{
+  "document_type": "ai_valuation_workbook_failure_and_solution_options",
+  "scope": {
+    "evidence": "Comparison of the supplied AI-generated Q2 workbook and completed Q2 workbook.",
+    "limits": "Completed workbook is treated as the answer key, not independently validated. This is not a complete cell-by-cell formula audit. Possible causes are hypotheses based on observed symptoms."
+  },
+  "conclusion": {
+    "finding": "An optimized prompt alone is not a sufficient control for reliable valuation-workbook production.",
+    "safe_reliance": "Use AI heavily for interpretation, semantic mapping, exception analysis, candidate lineage, and drafting. Do not use AI alone for authoritative source selection, calculation execution, formula-network integrity, reconciliation, valuation-policy approval, or final sign-off."
+  },
+  "weaknesses": [
+    {
+      "id": "W01",
+      "category": "valuation_methodology",
+      "severity": "critical",
+      "ai": "Selected ~12.3608x and said it was carried from Q1.",
+      "answer_key": "~13.6946x.",
+      "risk": "Misstates EV and all downstream values.",
+      "possible_causes": [
+        "No enforced current-quarter methodology rule",
+        "Uncertainty defaulted to carry-forward",
+        "No blocking reconciliation to approved comparables"
+      ],
+      "supplements": [
+        "Methodology schema",
+        "Deterministic multiple calculation",
+        "Approval/blocking gate"
+      ]
+    },
+    {
+      "id": "W02",
+      "category": "adjusted_ebitda",
+      "severity": "high",
+      "ai": "TTM adjusted EBITDA ~2.5632M.",
+      "answer_key": "~2.7545M.",
+      "risk": "Understates EV and distorts returns/attribution.",
+      "possible_causes": [
+        "Incomplete current-quarter adjustments",
+        "Wrong LTM window or period mapping",
+        "Incomplete source mapping"
+      ],
+      "supplements": [
+        "Deterministic period engine",
+        "Adjustment-level reconciliation",
+        "Monthly/LTM checks"
+      ]
+    },
+    {
+      "id": "W03",
+      "category": "cash_linkage",
+      "severity": "high",
+      "ai": "Valuation summary showed 136,466.60 while its Q2 financial sheet showed 571,077.42.",
+      "answer_key": "571,077.42 in valuation summary.",
+      "risk": "Internal inconsistency and equity-value error.",
+      "possible_causes": [
+        "Stale downstream reference",
+        "New Q2 sheet not fully rewired",
+        "No source-to-summary propagation test"
+      ],
+      "supplements": [
+        "Dependency graph",
+        "Critical-output lineage",
+        "Cross-sheet assertions"
+      ]
+    },
+    {
+      "id": "W04",
+      "category": "cap_table_ownership",
+      "severity": "critical",
+      "ai": "Carried earlier ownership structure and omitted answer-key Q2 security-class/allocation changes.",
+      "answer_key": "Included 1.78 strike class, revised allocations, and fully diluted waterfall.",
+      "risk": "Wrong sponsor value, ownership, MOIC, IRR, and attribution.",
+      "possible_causes": [
+        "Current ownership evidence unavailable or unrecognized",
+        "Continuity used as default",
+        "Security mechanics not encoded"
+      ],
+      "supplements": [
+        "Canonical cap-table schema",
+        "Deterministic waterfall",
+        "Human approval of ownership events"
+      ]
+    },
+    {
+      "id": "W05",
+      "category": "valuation_summary",
+      "severity": "critical",
+      "ai": "Key EV, equity value, investment value, MOIC, and ownership outputs were blank/incomplete.",
+      "answer_key": "Outputs populated and linked.",
+      "risk": "Not decision-ready.",
+      "possible_causes": [
+        "Incomplete formula network",
+        "No required-output contract",
+        "Upstream uncertainty blocked downstream logic"
+      ],
+      "supplements": [
+        "Required-cell contract",
+        "No-blank/error gates",
+        "Dependency-aware build order"
+      ]
+    },
+    {
+      "id": "W06",
+      "category": "attribution",
+      "severity": "critical",
+      "ai": "Attribution lines were predominantly zero and did not explain value movement.",
+      "answer_key": "Separated multiple, EBITDA, cash, and ownership impacts and reconciled total change.",
+      "risk": "Cannot explain quarterly value creation.",
+      "possible_causes": [
+        "Bridge formulas not reconstructed",
+        "Prior/current states inconsistently linked",
+        "Labels reproduced without logic"
+      ],
+      "supplements": [
+        "Deterministic bridge",
+        "Total-change reconciliation",
+        "Prior/current state tests"
+      ]
+    },
+    {
+      "id": "W07",
+      "category": "irr_moic",
+      "severity": "high",
+      "ai": "Summary IRR near 94.1%; June IRR schedule not visibly populated with the answer-key cash-flow chain.",
+      "answer_key": "June IRR ~42.2% and MOIC ~2.155x.",
+      "risk": "Plausible-looking but materially wrong return metrics.",
+      "possible_causes": [
+        "Wrong dates/cash flows",
+        "Old-period linkage",
+        "Missing cap-table proceeds"
+      ],
+      "supplements": [
+        "Dated cash-flow ledger",
+        "Independent XIRR/MOIC recomputation",
+        "Tie-out to proceeds and invested capital"
+      ]
+    },
+    {
+      "id": "W08",
+      "category": "lp_reporting",
+      "severity": "critical",
+      "ai": "Key ownership, invested capital, carrying value, MOIC, IRR, and Q2 fields blank.",
+      "answer_key": "LP report populated from core outputs.",
+      "risk": "Not usable for investor reporting.",
+      "possible_causes": [
+        "Downstream links not rebuilt",
+        "No report-cell map",
+        "No final-surface completeness test"
+      ],
+      "supplements": [
+        "Output-cell contract",
+        "Report completeness checks",
+        "Reconciliation to core outputs"
+      ]
+    },
+    {
+      "id": "W09",
+      "category": "architecture",
+      "severity": "high",
+      "ai": "Created Q2 sheets without fully reconnecting the integrated model.",
+      "answer_key": "Linked financials, adjustments, comps, valuation, cap table, IRR, attribution, and LP report.",
+      "risk": "Correct local values coexist with stale downstream logic.",
+      "possible_causes": [
+        "Sheet-level generation without dependency graph",
+        "Insufficient formula-pattern extraction",
+        "No end-to-end test"
+      ],
+      "supplements": [
+        "Dependency graph",
+        "Template-preserving update",
+        "Critical-path tests"
+      ]
+    },
+    {
+      "id": "W10",
+      "category": "uncertainty_controls",
+      "severity": "high",
+      "ai": "Disclosed unresolved items yet still carried assumptions into outputs.",
+      "answer_key": "Contained finalized current-quarter outputs.",
+      "risk": "Review labels do not stop unsupported values from flowing.",
+      "possible_causes": [
+        "Completion objective overrode evidence sufficiency",
+        "Flags were advisory",
+        "No field-level confidence gate"
+      ],
+      "supplements": [
+        "Blocking/advisory policy",
+        "Evidence-backed confidence",
+        "Human materiality gates"
+      ]
+    }
+  ],
+  "ai_role": {
+    "lean_on_ai_for": [
+      "Source interpretation",
+      "Semantic label mapping",
+      "Candidate lineage",
+      "Exception explanation",
+      "Review-note drafting",
+      "Proposed workbook changes after logic is known"
+    ],
+    "never_ai_alone": [
+      "Resolve conflicting authoritative sources",
+      "Choose valuation policy",
+      "Construct LTM windows",
+      "Execute cap-table waterfalls",
+      "Calculate/recalculate final metrics",
+      "Certify completeness/reconciliation",
+      "Approve valuation or LP reporting"
+    ]
+  },
+  "required_solution_layers": {
+    "knowledge": [
+      "Canonical valuation schema",
+      "Company overlay",
+      "Source hierarchy",
+      "Template/cell-role map"
+    ],
+    "deterministic": [
+      "Workbook/formula parser",
+      "Period/LTM engine",
+      "Cap-table waterfall",
+      "Valuation/attribution/IRR/MOIC calculators",
+      "Controlled workbook writer"
+    ],
+    "validation": [
+      "Required fields",
+      "Lineage",
+      "Cross-sheet consistency",
+      "Independent KPI recomputation",
+      "Gold benchmark/regression tests"
+    ],
+    "human": [
+      "Ambiguous mappings",
+      "Methodology changes",
+      "Cap-table events",
+      "Material exceptions",
+      "Final sign-off"
+    ]
+  },
+  "options": [
+    {
+      "id": "A",
+      "name": "AI copilot plus deterministic valuation engine",
+      "structure": "AI interprets/maps/explains; deterministic services calculate, reconcile, trace, and write; humans approve material exceptions.",
+      "strength": "Highest reliability and auditability.",
+      "tradeoff": "Most engineering.",
+      "fit": "Best overall response to the observed failures."
+    },
+    {
+      "id": "B",
+      "name": "Template-preserving AI-assisted roll-forward",
+      "structure": "Deterministically preserve and roll the approved prior workbook; AI maps new inputs and flags structural changes.",
+      "strength": "Fastest lower-risk MVP and preserves known logic.",
+      "tradeoff": "Can inherit legacy defects and needs special handling for structural changes.",
+      "fit": "Directly addresses broken downstream rewiring."
+    },
+    {
+      "id": "C",
+      "name": "Dual-path build plus gold-key testbench",
+      "structure": "Separate extraction/reference path and forward-build path; deterministic testbench compares anchors, formulas, outputs, and coverage.",
+      "strength": "Measures whether logic was learned and supports regression testing.",
+      "tradeoff": "More workflow complexity; independence must be protected.",
+      "fit": "Best assurance layer, not necessarily the production builder itself."
+    },
+    {
+      "id": "D",
+      "name": "Broad AI generation with strict release gates",
+      "structure": "AI generates most content, but validators independently recompute critical metrics and block release.",
+      "strength": "Least architectural change.",
+      "tradeoff": "Detects failures but may not repair them; highest residual risk.",
+      "fit": "Useful interim control, weakest long-term design."
+    }
+  ],
+  "recommendation": {
+    "architecture": "A + B + C",
+    "workflow": [
+      "Fingerprint sources and approved prior workbook",
+      "Parse structure/formulas/dependencies",
+      "AI maps evidence into schema with citations/confidence",
+      "Deterministic engines calculate all critical outputs",
+      "Controlled writer updates approved template",
+      "Independent validators recompute and reconcile",
+      "Gold-key testbench measures coverage/regression",
+      "Human reviews material exceptions and signs off"
+    ],
+    "bottom_line": "AI should lead interpretation, while deterministic calculation, provenance, validation, and human approval form the control system."
+  }
+}
