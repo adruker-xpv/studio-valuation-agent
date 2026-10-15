@@ -1,0 +1,66 @@
+{
+  "valuation_method": [
+    {
+      "ref": "W3:'III. Valuation Summary'!D6",
+      "observed_label": "Valuation Methodology",
+      "observed_value": "EV/EBITDA"
+    }
+  ],
+  "valuation_metric": [
+    {
+      "ref": "W3:'IV. EBITDA Adjustments'!B79",
+      "observed_label": "Adjusted EBITDA",
+      "observed_value": "Adjusted EBITDA"
+    }
+  ],
+  "metric_period": [
+    {
+      "ref": "W3:'IV. EBITDA Adjustments'!E6:P6",
+      "observed_label": "LTM",
+      "observed_value": null
+    }
+  ],
+  "applied_multiple": [
+    {
+      "ref": "W3:'III. Valuation Summary'!F9",
+      "observed_label": "EV/Adj. EBITDA (A)",
+      "observed_value": 13.295141906532306
+    }
+  ],
+  "enterprise_value": [
+    {
+      "ref": "W3:'III. Valuation Summary'!F12",
+      "observed_label": "Implied Enterprise Value (A*B)",
+      "observed_value": 25952612.365041327
+    }
+  ],
+  "equity_bridge": [
+    {
+      "ref": "W3:'III. Valuation Summary'!B12:F15",
+      "observed_label": "Equity Value",
+      "observed_value": null
+    }
+  ],
+  "ownership_or_waterfall": [
+    {
+      "ref": "W3:'III. Valuation Summary'!B29",
+      "observed_label": "XPV FD Ownership",
+      "observed_value": "XPV FD Ownership"
+    }
+  ],
+  "company_value": [
+    {
+      "ref": "W3:'III. Valuation Summary'!F15",
+      "observed_label": "Equity Value",
+      "observed_value": 26374772.015041325
+    }
+  ],
+  "fund_reported_value": [
+    {
+      "ref": "W4:'Valuation Summary '!D6:D8",
+      "observed_label": "Valuation as of  Mar 31, 2026",
+      "observed_value": null
+    }
+  ],
+  "company_to_fund_relationship": []
+}

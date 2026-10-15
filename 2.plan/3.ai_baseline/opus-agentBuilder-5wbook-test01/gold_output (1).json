@@ -1,0 +1,140 @@
+{
+  "schema": "gold-mvp/3",
+  "case_id": "Opus-test-agentBuilder-01",
+  "quarter_end": "2026-03-31",
+  "source_files": {
+    "W1": "2026 Consolidated Master File_0226.xlsx",
+    "W2": "2026 Consolidated Master File_0326 V2.xlsx",
+    "W3": "2026 Q1 - Opus Water - Valuation Workbook DRAFT.xlsx",
+    "W4": "Fund III - Valuation Summary_Jun 30, 2026.xlsx",
+    "W5": "Opus Water - Monthly Summary 2026.03.xlsx",
+    "W6": "2026 Consolidated Master File_0126.xlsx"
+  },
+  "answers": {
+    "valuation_method": {
+      "answer": "EV/EBITDA",
+      "primary_anchor": {
+        "ref": "W3:'III. Valuation Summary'!D6"
+      }
+    },
+    "valuation_metric": {
+      "answer": "Adjusted EBITDA",
+      "primary_anchor": {
+        "ref": "W3:'IV. EBITDA Adjustments'!B79"
+      }
+    },
+    "metric_period": {
+      "answer": "TTM",
+      "first_month": "2025-04",
+      "last_month": "2026-03",
+      "primary_anchor": {
+        "ref": "W3:'IV. EBITDA Adjustments'!E6:P6"
+      }
+    },
+    "applied_multiple": {
+      "answer": 13.295141906532306,
+      "primary_anchor": {
+        "ref": "W3:'III. Valuation Summary'!F9"
+      }
+    },
+    "enterprise_value": {
+      "answer": 25952612.365041327,
+      "primary_anchor": {
+        "ref": "W3:'III. Valuation Summary'!F12"
+      }
+    },
+    "equity_bridge": {
+      "answer": "Enterprise Value + Cash - Debt = Equity Value",
+      "cash": 422159.65,
+      "debt": 0,
+      "equity_value": 26374772.015041325,
+      "primary_anchor": {
+        "ref": "W3:'III. Valuation Summary'!B12:F15"
+      }
+    },
+    "ownership_or_waterfall": {
+      "answer": "XPV FD Ownership",
+      "primary_anchor": {
+        "ref": "W3:'III. Valuation Summary'!B29"
+      }
+    },
+    "company_value": {
+      "answer": 26374772.015041325,
+      "primary_anchor": {
+        "ref": "W3:'III. Valuation Summary'!F15"
+      }
+    },
+    "fund_reported_value": {
+      "answer": 24723979,
+      "primary_anchor": {
+        "ref": "W4:'Valuation Summary '!D6:D8"
+      }
+    },
+    "company_to_fund_relationship": {
+      "answer": "DIFFERENT",
+      "company_value": 26374772.015041325,
+      "fund_reported_value": 24723979,
+      "basis": "Fund-reported value corresponds to the investment value after the ownership/cap-table allocation."
+    }
+  },
+  "known_rivals": [
+    {
+      "field": "applied_multiple",
+      "ref": "W3:'III. Valuation Summary'!H9",
+      "value": 13.375855725218317,
+      "reason": "Prior-period multiple, not the valuation-quarter multiple."
+    },
+    {
+      "field": "valuation_metric",
+      "ref": "W3:'III. Valuation Summary'!H10",
+      "value": 3112034.283084043,
+      "reason": "Prior-period TTM adjusted EBITDA, not the current quarter metric."
+    },
+    {
+      "field": "fund_reported_value",
+      "ref": "W4:'Valuation Summary '!H8",
+      "value": 35099879,
+      "reason": "June 30, 2026 valuation, later than the requested quarter end."
+    },
+    {
+      "field": "valuation_metric",
+      "ref": "W2:'Mar 2026'!A49",
+      "value": null,
+      "reason": "Quarter operating actual/budget summary is not the TTM valuation metric anchor."
+    }
+  ],
+  "material_discrepancies": [
+    {
+      "description": "The fund summary displays the March 31, 2026 Opus valuation rounded to 24,723,979, while the valuation workbook shows XPV Value of 24,723,978.876158837.",
+      "refs": [
+        "W4:'Valuation Summary '!D8",
+        "W3:'III. Valuation Summary'!F25"
+      ]
+    },
+    {
+      "description": "The fund summary lists fully diluted ownership of 86.8%, while the valuation workbook reports XPV FD Ownership of 93.7410145652%. The attached workbooks do not establish why these percentages differ.",
+      "refs": [
+        "W4:'Valuation Summary '!B8",
+        "W3:'III. Valuation Summary'!F29"
+      ]
+    }
+  ],
+  "human_judgments": [
+    {
+      "judgment": "Appropriateness of the selected EV/Adjusted EBITDA multiple",
+      "answer": "UNRESOLVED"
+    },
+    {
+      "judgment": "Appropriateness and completeness of EBITDA adjustments",
+      "answer": "UNRESOLVED"
+    },
+    {
+      "judgment": "Correctness of the ownership/cap-table allocation and the differing ownership percentages",
+      "answer": "UNRESOLVED"
+    }
+  ],
+  "certification": {
+    "material_truth_complete": "NO",
+    "analyst_note": "AI-produced, not certified"
+  }
+}

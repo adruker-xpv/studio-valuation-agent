@@ -1,0 +1,16 @@
+{
+  "stage": "A",
+  "created": "2026-10-15T13:50:20",
+  "files": {
+    "output": "17b7fd8e92d7c018aaa026b6ec276d4b3ecc6d65c5987ae3e55b366761df65ca",
+    "validation_report": "87317d61137bf3e07d930005501009af32a3e541450f5512f8bf867a7724aa07",
+    "evidence": "f98e28572773a9e47052bbbf75dd5970c0d604010a332cf1b85df5a98cf5d1e8"
+  },
+  "workbooks": {
+    "W1": "12ca3b01f8cfd2a63d1963817c88ab5c4416760f8b3aa087b785a3f27f846fba",
+    "W2": "118c250ef9dcd011a24ddeafd00c6fa582a73984a53f51ca72ab05ef8d77b64a",
+    "W3": "690eaa70c7fb64f97f3b43faaf456601e96cb241104824d841a1233f6f3af92f",
+    "W4": "afeeec5a4aa3dca9758afb61aa60c4914cff02aeab8be7c22a4a74e2b8698e68",
+    "W5": "97f320ad761043379265ef35584cd62acb3d897b1739b34f23d88ea8c5d8bb27"
+  }
+}

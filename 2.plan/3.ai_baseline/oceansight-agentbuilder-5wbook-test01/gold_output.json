@@ -1,0 +1,128 @@
+{
+  "schema": "gold-mvp/3",
+  "case_id": "practice-oceansight-04-fiveWorkbooks",
+  "quarter_end": "2026-06-30",
+  "source_files": {
+    "W1": "OceanSight Monthly Summary - 2026.xlsx",
+    "W2": "OceanSight - June 2026 TTM Proforma.xlsx",
+    "W3": "OceanSight - June 2026 vf.xlsx",
+    "W4": "2026 Q2 - OceanSight Valuation (30 June 2026).xlsx",
+    "W5": "Fund III - Valuation Summary_Jun 30, 2026.xlsx"
+  },
+  "answers": {
+    "valuation_method": {
+      "answer": "EV/EBITDA",
+      "primary_anchor": {
+        "ref": "W4:'Valuation Summary-Prior Period'!D5"
+      }
+    },
+    "valuation_metric": {
+      "answer": "Adjusted EBITDA After Corp. OH",
+      "primary_anchor": {
+        "ref": "W2:TTM!A63"
+      },
+      "supporting_anchors": [
+        {
+          "ref": "W4:'Valuation Summary-Prior Period'!F9"
+        }
+      ]
+    },
+    "metric_period": {
+      "answer": "UNRESOLVED",
+      "primary_anchor": {}
+    },
+    "applied_multiple": {
+      "answer": 10.139408714992795,
+      "primary_anchor": {
+        "ref": "W4:'Valuation Summary-Prior Period'!F8"
+      }
+    },
+    "enterprise_value": {
+      "answer": 22946380.677779544,
+      "primary_anchor": {
+        "ref": "W4:'Valuation Summary-Prior Period'!F11"
+      }
+    },
+    "equity_bridge": {
+      "answer": "Enterprise value plus cash less debt equals total common equity",
+      "cash": 1583937.0545948998,
+      "debt": 0,
+      "equity_value": 24530317.732374445,
+      "primary_anchor": {
+        "ref": "W4:'Valuation Summary-Prior Period'!F11:F14"
+      }
+    },
+    "ownership_or_waterfall": {
+      "answer": "UNRESOLVED",
+      "primary_anchor": {}
+    },
+    "company_value": {
+      "answer": 24271236.19591189,
+      "primary_anchor": {
+        "ref": "W4:'Valuation Summary-Prior Period'!F26"
+      }
+    },
+    "fund_reported_value": {
+      "answer": 26280918,
+      "primary_anchor": {
+        "ref": "W5:'Valuation Summary '!B25"
+      }
+    },
+    "company_to_fund_relationship": {
+      "answer": "DIFFERENT",
+      "company_value": 24271236.19591189,
+      "fund_reported_value": 26280918,
+      "primary_anchor": {
+        "ref": "W5:'Valuation Summary '!A25:B25"
+      }
+    }
+  },
+  "known_rivals": [
+    {
+      "field": "applied_multiple",
+      "value": 11.792696649410185,
+      "ref": "W4:'Valuation Summary-Prior Period'!H8",
+      "reason": "prior-period multiple, not the valuation-quarter multiple"
+    },
+    {
+      "field": "valuation_metric",
+      "value": 2453472.6151579535,
+      "ref": "W4:'Valuation Summary-Prior Period'!H9",
+      "reason": "prior-period adjusted EBITDA, not the valuation-quarter metric"
+    },
+    {
+      "field": "fund_reported_value",
+      "value": 28979482.931483738,
+      "ref": "W5:'Valuation Summary '!C25",
+      "reason": "Q3 2026 projected value based on budget, not Q2 2026 actual"
+    },
+    {
+      "field": "fund_reported_value",
+      "value": 37082289.34979657,
+      "ref": "W5:'Valuation Summary '!D25",
+      "reason": "Q4 2026 projected value based on budget, not Q2 2026 actual"
+    }
+  ],
+  "material_discrepancies": [
+    {
+      "topic": "company value versus fund-reported value",
+      "company_value": 24271236.19591189,
+      "fund_reported_value": 26280918,
+      "difference": 2009681.8040881082,
+      "refs": [
+        "W4:'Valuation Summary-Prior Period'!F26",
+        "W5:'Valuation Summary '!H10"
+      ],
+      "note": "The two workbooks save different quarter-end values."
+    }
+  ],
+  "human_judgments": {
+    "multiple_appropriateness": "UNRESOLVED",
+    "adjustment_appropriateness": "UNRESOLVED",
+    "fund_value_reconciliation": "UNRESOLVED"
+  },
+  "certification": {
+    "material_truth_complete": "NO",
+    "analyst_note": "AI-produced, not certified"
+  }
+}

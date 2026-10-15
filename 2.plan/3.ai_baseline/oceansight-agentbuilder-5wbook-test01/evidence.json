@@ -1,0 +1,65 @@
+{
+  "valuation_method": [
+    {
+      "ref": "W4:'Valuation Summary-Prior Period'!D5",
+      "observed_label": "Valuation Methodology",
+      "observed_value": "EV/EBITDA"
+    }
+  ],
+  "valuation_metric": [
+    {
+      "ref": "W2:TTM!A63",
+      "observed_label": "Adjusted EBITDA After Corp. OH",
+      "observed_value": "Adjusted EBITDA After Corp. OH"
+    },
+    {
+      "ref": "W4:'Valuation Summary-Prior Period'!F9",
+      "observed_label": "Adj. EBITDA (B)",
+      "observed_value": 2263088.639858212
+    }
+  ],
+  "metric_period": [],
+  "applied_multiple": [
+    {
+      "ref": "W4:'Valuation Summary-Prior Period'!F8",
+      "observed_label": "EV/EBITDA Multiple (A)",
+      "observed_value": 10.139408714992795
+    }
+  ],
+  "enterprise_value": [
+    {
+      "ref": "W4:'Valuation Summary-Prior Period'!F11",
+      "observed_label": "Implied Enterprise Value (A*B)",
+      "observed_value": 22946380.677779544
+    }
+  ],
+  "equity_bridge": [
+    {
+      "ref": "W4:'Valuation Summary-Prior Period'!F11:F14",
+      "observed_label": "Implied Enterprise Value / Cash / Debt / Total Common Equity",
+      "observed_value": null
+    }
+  ],
+  "ownership_or_waterfall": [],
+  "company_value": [
+    {
+      "ref": "W4:'Valuation Summary-Prior Period'!F26",
+      "observed_label": "XPV Value",
+      "observed_value": 24271236.19591189
+    }
+  ],
+  "fund_reported_value": [
+    {
+      "ref": "W5:'Valuation Summary '!B25",
+      "observed_label": "OceanSight / Q2'26 (Actual)",
+      "observed_value": 26280918
+    }
+  ],
+  "company_to_fund_relationship": [
+    {
+      "ref": "W5:'Valuation Summary '!A25:B25",
+      "observed_label": "OceanSight / Q2'26 (Actual)",
+      "observed_value": null
+    }
+  ]
+}

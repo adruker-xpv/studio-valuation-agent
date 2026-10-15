@@ -1,0 +1,91 @@
+{
+  "stage": "A",
+  "schema_checked": "gold-mvp/3",
+  "overall": "REVIEW",
+  "structure": [],
+  "fields": {
+    "valuation_method": {
+      "decision": "REVIEW",
+      "evidence": "SOURCE_VERIFIED",
+      "reasons": [
+        "no approved company map: new claim, a person approves once"
+      ]
+    },
+    "valuation_metric": {
+      "decision": "REVIEW",
+      "evidence": "SOURCE_VERIFIED",
+      "reasons": [
+        "no approved company map: new claim, a person approves once"
+      ]
+    },
+    "metric_period": {
+      "decision": "REVIEW",
+      "evidence": "UNRESOLVED",
+      "reasons": [
+        "answer is UNRESOLVED"
+      ]
+    },
+    "applied_multiple": {
+      "decision": "REVIEW",
+      "evidence": "SOURCE_VERIFIED",
+      "reasons": [
+        "no approved company map: new claim, a person approves once"
+      ]
+    },
+    "enterprise_value": {
+      "decision": "REVIEW",
+      "evidence": "SOURCE_VERIFIED",
+      "reasons": [
+        "no approved company map: new claim, a person approves once"
+      ]
+    },
+    "equity_bridge": {
+      "decision": "REVIEW",
+      "evidence": "SOURCE_VERIFIED",
+      "reasons": [
+        "no approved company map: new claim, a person approves once"
+      ]
+    },
+    "ownership_or_waterfall": {
+      "decision": "REVIEW",
+      "evidence": "UNRESOLVED",
+      "reasons": [
+        "answer is UNRESOLVED"
+      ]
+    },
+    "company_value": {
+      "decision": "REVIEW",
+      "evidence": "SOURCE_VERIFIED",
+      "reasons": [
+        "no approved company map: new claim, a person approves once"
+      ]
+    },
+    "fund_reported_value": {
+      "decision": "REVIEW",
+      "evidence": "PLAUSIBLE",
+      "reasons": [
+        "stated label not found beside or above the anchor",
+        "no approved company map: new claim, a person approves once"
+      ]
+    },
+    "company_to_fund_relationship": {
+      "decision": "REVIEW",
+      "evidence": "NOT_ANCHORED",
+      "reasons": [
+        "semantic judgment: a person confirms"
+      ]
+    }
+  },
+  "cross_checks": [
+    {
+      "check": "enterprise value + cash - debt = equity",
+      "status": "OK"
+    }
+  ],
+  "approved_map_used": false,
+  "counts": {
+    "PASS": 0,
+    "REVIEW": 10,
+    "BLOCK": 0
+  }
+}
