@@ -1,0 +1,136 @@
+{
+  "schema": "gold-mvp/3",
+  "case_id": "[case ID]",
+  "quarter_end": "2026-03-31",
+  "source_files": {
+    "W1": "2026 Consolidated Master File_0326 V2.xlsx",
+    "W2": "2026 Q1 - Opus Water - Valuation Workbook DRAFT.xlsx",
+    "W3": "Fund III - Valuation Summary_Jun 30, 2026.xlsx",
+    "W4": "Opus Water - Monthly Summary 2026.03.xlsx",
+    "W5": "2026 Consolidated Master File_0126.xlsx",
+    "W6": "2026 Consolidated Master File_0226.xlsx"
+  },
+  "answers": {
+    "valuation_method": {
+      "answer": "EV/EBITDA",
+      "primary_anchor": {
+        "ref": "W2:'III. Valuation Summary'!D6"
+      }
+    },
+    "valuation_metric": {
+      "answer": "TTM Adjusted EBITDA",
+      "primary_anchor": {
+        "ref": "W2:'III. Valuation Summary'!F10"
+      }
+    },
+    "metric_period": {
+      "answer": "TTM / LTM, twelve months ended 2026-03",
+      "first_month": "2025-04",
+      "last_month": "2026-03",
+      "primary_anchor": {
+        "ref": "W2:'IV. EBITDA Adjustments'!E6:P6"
+      }
+    },
+    "applied_multiple": {
+      "answer": 13.295141906532306,
+      "primary_anchor": {
+        "ref": "W2:'III. Valuation Summary'!F9"
+      }
+    },
+    "enterprise_value": {
+      "answer": 25952612.365041327,
+      "primary_anchor": {
+        "ref": "W2:'III. Valuation Summary'!F12"
+      }
+    },
+    "equity_bridge": {
+      "answer": "Enterprise value plus cash less debt equals equity value",
+      "cash": 422159.65,
+      "debt": 0,
+      "equity_value": 26374772.015041325,
+      "primary_anchor": {
+        "ref": "W2:'III. Valuation Summary'!F15"
+      },
+      "supporting_anchors": [
+        {
+          "ref": "W2:'III. Valuation Summary'!F13"
+        },
+        {
+          "ref": "W2:'III. Valuation Summary'!F14"
+        }
+      ]
+    },
+    "ownership_or_waterfall": {
+      "answer": "XPV fully diluted ownership of 93.7410145652% applied to equity value",
+      "primary_anchor": {
+        "ref": "W2:'III. Valuation Summary'!F29"
+      }
+    },
+    "company_value": {
+      "answer": 26374772.015041325,
+      "primary_anchor": {
+        "ref": "W2:'III. Valuation Summary'!F15"
+      }
+    },
+    "fund_reported_value": {
+      "answer": "UNRESOLVED",
+      "primary_anchor": {}
+    },
+    "company_to_fund_relationship": {
+      "answer": "UNRESOLVED",
+      "company_value": 26374772.015041325,
+      "fund_reported_value": null,
+      "reason": "The March amount appears in a later June-quarter fund summary and is stale-period evidence under the validator."
+    }
+  },
+  "known_rivals": [
+    {
+      "field": "applied_multiple",
+      "ref": "W2:'III. Valuation Summary'!H9",
+      "value": 13.375855725218317,
+      "reason": "Prior-period multiple, not valuation-quarter current period."
+    },
+    {
+      "field": "valuation_metric",
+      "ref": "W2:'III. Valuation Summary'!H10",
+      "value": 3112034.283084043,
+      "reason": "Prior-period TTM adjusted EBITDA."
+    },
+    {
+      "field": "fund_reported_value",
+      "ref": "W3:'Valuation Summary '!H8",
+      "value": 35099879,
+      "reason": "June 30, 2026 fund valuation, later than the March 31, 2026 valuation quarter."
+    },
+    {
+      "field": "fund_reported_value",
+      "ref": "W3:'Valuation Summary '!C23",
+      "value": 38732122.17208954,
+      "reason": "Q3 2026 projected value based on budget, not actual valuation-quarter value."
+    }
+  ],
+  "material_discrepancies": [
+    {
+      "topic": "Fund reported value rounding",
+      "details": "W2 Q1 XPV Value is 24,723,978.876158837 while W3 reports the March 31, 2026 Opus valuation as 24,723,979; difference is rounding."
+    },
+    {
+      "topic": "Later fund summary period",
+      "details": "W3 is a June 30, 2026 draft package and separately shows a later Opus value of 35,099,879; it is not used as the March 31, 2026 answer."
+    },
+    {
+      "topic": "Case identifier",
+      "details": "The supplied case ID remains the placeholder [case ID]."
+    }
+  ],
+  "human_judgments": {
+    "multiple_appropriateness": "UNRESOLVED",
+    "ebitda_adjustments_appropriateness": "UNRESOLVED",
+    "ownership_or_waterfall_appropriateness": "UNRESOLVED",
+    "fund_value_treatment_appropriateness": "UNRESOLVED"
+  },
+  "certification": {
+    "material_truth_complete": "NO",
+    "analyst_note": "AI-produced, not certified"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "valuation_method": [
+    {
+      "ref": "W2:'III. Valuation Summary'!D6",
+      "observed_label": "Valuation Methodology",
+      "observed_value": "EV/EBITDA"
+    }
+  ],
+  "valuation_metric": [
+    {
+      "ref": "W2:'III. Valuation Summary'!F10",
+      "observed_label": "TTM Adj. EBITDA (B)",
+      "observed_value": 1952037.2589848042
+    }
+  ],
+  "metric_period": [
+    {
+      "ref": "W2:'IV. EBITDA Adjustments'!E6:P6",
+      "observed_label": "Monthly period headers",
+      "observed_value": null
+    }
+  ],
+  "applied_multiple": [
+    {
+      "ref": "W2:'III. Valuation Summary'!F9",
+      "observed_label": "EV/Adj. EBITDA (A)",
+      "observed_value": 13.295141906532306
+    }
+  ],
+  "enterprise_value": [
+    {
+      "ref": "W2:'III. Valuation Summary'!F12",
+      "observed_label": "Implied Enterprise Value (A*B)",
+      "observed_value": 25952612.365041327
+    }
+  ],
+  "equity_bridge": [
+    {
+      "ref": "W2:'III. Valuation Summary'!F15",
+      "observed_label": "Equity Value",
+      "observed_value": 26374772.015041325
+    },
+    {
+      "ref": "W2:'III. Valuation Summary'!F13",
+      "observed_label": "Cash",
+      "observed_value": 422159.65
+    },
+    {
+      "ref": "W2:'III. Valuation Summary'!F14",
+      "observed_label": "Debt",
+      "observed_value": 0
+    }
+  ],
+  "ownership_or_waterfall": [
+    {
+      "ref": "W2:'III. Valuation Summary'!F29",
+      "observed_label": "XPV FD Ownership",
+      "observed_value": 0.9374101456520249
+    }
+  ],
+  "company_value": [
+    {
+      "ref": "W2:'III. Valuation Summary'!F15",
+      "observed_label": "Equity Value",
+      "observed_value": 26374772.015041325
+    }
+  ],
+  "fund_reported_value": [],
+  "company_to_fund_relationship": []
+}
