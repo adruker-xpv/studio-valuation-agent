@@ -1,0 +1,60 @@
+# Sensitive source data
+1.background/
+
+# Gold / answer keys
+2.plan/4.answer_keys/
+**/*gold_key*.json
+**/*gold-key*.json
+**/*answer_key*.json
+**/*answer-key*.json
+**/*Answer_Key*.xlsx
+**/*ANSWER_KEY*.xlsx
+
+# Company memory
+**/*.memory.json
+**/*memory.json
+**/company_memory/
+OceanSight.json
+
+# Private run / grading outputs
+3.outputs/
+**/*extraction*.json
+**/*grading_report*.json
+**/*test_bench_report*.json
+**/*review_decisions*.json
+**/*approved_changes*.json
+**/*proposed_changes*.json
+**/*run_manifest*.json
+**/*verification*.json
+**/checkpoints/
+**/traces/
+
+# Explicit legacy sensitive files
+OceanSight_gold_key_DRAFT.json
+Opus_Q1_2026_gold_key_DRAFT.json
+OceanSight_Q2_2026_gold_key_2026_10_26
+opus_gold_test_bench_report_2026_10_15.json
+opus_extraction_report_2026_10_15.json
+ONBOARDING_END_TO_END_TEST.md
+**/0.SS/
+**/0.ss/
+**/0.Superseded/
+
+# Raw/private workbook and message data
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+*.eml
+*.msg
+
+# Local/runtime files
+.env
+.env.*
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+.pytest_cache/

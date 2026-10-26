@@ -1,0 +1,16 @@
+I’ll run the frozen Stage A package through the official scorer, omitting any company-map argument as instructed.
+Gold test report (sanitized: safe to share)
+Stage A — AI proposal + evidence validator (no access to the Gold key)
+Validator overall: REVIEW · PASS 0 · REVIEW 10 · BLOCK 0 · approved company map used: no Integrity: output unchanged since Stage A; validation_report unchanged since Stage A; evidence unchanged since Stage A; Stage A validation reproduced independently
+Stage B — hidden Gold scorer on Stage A's frozen outputs
+AI proposals right: 4 of 10 Correct automatically: 0 · Correctly escalated: 6 · Incorrectly escalated: 4 · Incorrectly accepted: 0 (target 0) Needs a person to grade wording: 0 · Known rivals chosen: 0 · Validator overall: REVIEW
+Field	AI proposal	Program decision	Outcome	Chose a known rivalvaluation_method	RIGHT	REVIEW	incorrectly_escalated	
+valuation_metric	RIGHT	REVIEW	incorrectly_escalated	
+metric_period	RIGHT	REVIEW	incorrectly_escalated	
+applied_multiple	WRONG	REVIEW	correctly_escalated	
+enterprise_value	WRONG	REVIEW	correctly_escalated	
+equity_bridge	RIGHT	REVIEW	incorrectly_escalated	
+ownership_or_waterfall	WRONG	REVIEW	correctly_escalated	
+company_value	WRONG	REVIEW	correctly_escalated	
+fund_reported_value	UNRESOLVED_OUT	REVIEW	correctly_escalated	
+company_to_fund_relationship	UNRESOLVED_OUT	REVIEW	correctly_escalated
