@@ -17,7 +17,7 @@
 OceanSight.json
 
 # Private run / grading outputs
-3.outputs/
+#3.outputs/
 **/*extraction*.json
 **/*grading_report*.json
 **/*test_bench_report*.json

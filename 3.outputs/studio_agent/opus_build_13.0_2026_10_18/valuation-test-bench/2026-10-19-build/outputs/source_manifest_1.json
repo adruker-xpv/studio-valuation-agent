@@ -1,0 +1,36 @@
+{
+ "schema": "gold-sources/1",
+ "case_id": "OPUS-Q1-2026-GOLD-DRAFT-001",
+ "source_files": {
+  "W1": {
+   "file": "2026 Q1 - Opus Water - Valuation Workbook DRAFT.xlsx",
+   "sha256": "553243491604fa39eb5d614290170157e3b3c25c854e8868ae6a422b2e9f6b66",
+   "supplied_as": "2026_Q1_-_Opus_Water_-_Valuation_Workbook_DRAFT-4cf67db0.xlsx"
+  },
+  "W2": {
+   "file": "Fund III - Valuation Summary_Jun 30, 2026.xlsx",
+   "sha256": "97f320ad761043379265ef35584cd62acb3d897b1739b34f23d88ea8c5d8bb27",
+   "supplied_as": "Fund_III_-_Valuation_Summary_Jun_30__2026-1e7d4eb1.xlsx"
+  },
+  "W3": {
+   "file": "Opus Water - Monthly Summary 2026.03.xlsx",
+   "sha256": "718c64dbf4aad6894917ec2bed6f9a2f324b7bd9acf30abea5e1cef3b3f0c7c9",
+   "supplied_as": "Opus_Water_-_Monthly_Summary_2026.03-e6175142.xlsx"
+  },
+  "W4": {
+   "file": "2026 Consolidated Master File_0126.xlsx",
+   "sha256": "29aa3d6b1c2159404c207c7a09e50ba09e9652d89369a3cf8838ce171df39ac5",
+   "supplied_as": "2026_Consolidated_Master_File_0126-62513100.xlsx"
+  },
+  "W5": {
+   "file": "2026 Consolidated Master File_0226.xlsx",
+   "sha256": "70eb55599374f69da07b2ef1551ed3ab6be93353e7aa4ee1413e5b56bf568eda",
+   "supplied_as": "2026_Consolidated_Master_File_0226-0f21bfe9.xlsx"
+  },
+  "W6": {
+   "file": "2026 Consolidated Master File_0326 V2.xlsx",
+   "sha256": "2febcac1edba4245bdc2b84a4434615da68ef1b5c3fd529d26fd394752da9fe6",
+   "supplied_as": "2026_Consolidated_Master_File_0326_V2-5b767c81.xlsx"
+  }
+ }
+}

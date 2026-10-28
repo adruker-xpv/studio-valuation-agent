@@ -1,0 +1,18 @@
+# notes - Opus Water onboarding (run started 2026-10-19)
+- W5 'Valuation Summary '!H8 = 35,099,879 typed, header "Valuation as of Jun 30, 2026" (Q2); D8 = 24,723,979 typed, header "Valuation as of Mar 31, 2026" (Q1).
+- W5 Opus!I36 = F10*I32 -> 35,099,878.65 (fund-side waterfall); Opus!D4 = [X71 "2026 Q2 - Opus Water - LP Report v2 (002).xlsx"]'III. Valuation Summary'!F15 cached 38,292,365.35 (Q2 equity value, file not supplied).
+- W4 is Q1 (cover date 2026-03-31). 'III. Valuation Summary'!F9 multiple ='V. Comparables'!D39 13.295142; F10 TTM Adj EBITDA ='Pro Forma Financials (Q1)'!D38 1,952,037.26; F12 EV =F9*F10 25,952,612.37; F13 cash ='Pro Forma Financials (Q1)'!T45 422,159.65; F14 debt ='Financial Summary'!I60 = 0 typed; F15 equity =F12+F13-F14 26,374,772.02.
+- W4 'Cap Table (Mar 2026)'!D4 = 'III. Valuation Summary'!F15; G24 = F24-E45-F45 (exercise proceeds added); G31 per-unit 1.690179; G35 = E10*G31 (XPV 14,628,022 common units) 24,723,978.88; J35 sum; 'III. Valuation Summary'!F24 = J35; F25 = SUM(F24) = XPV value.
+- W4 'LP Report'!I13 = F25/1e6 (24.723979 $m) - LP report copy.
+- Metric: W4 'Pro Forma Financials (Q1)'!D38 = SUM(D27:D36)+D24; D-col rows = SUM(I:T) = Apr-25..Mar-26 (I8..T8 dates). I38:T38 monthly adj EBITDA. Monthly inputs typed (no formula).
+- Platform Adjustments row 41 (D41 615,296.29) NOT in metric; Operating Adj EBITDA D42 2,567,333.55 is a rival not used.
+- Yeary Controls rows end Oct-25 (col O); RP Adams only Jan-Feb 25 (outside window).
+- Multiple D39 = AVERAGE(precedents D25:D36, public comps E11:E22 = D*(1-C58 25% discount)).
+- W6 'PF LTM Calculation'!E16 = SUMIFS(G16:AP16, Apr-25..Mar-26) = 1,952,037.162775 vs W4 D38 1,952,037.258985 (diff 0.0962) - not linked.
+- W4 prior period H10 ='Pro Forma Financials (Q1)'!C38 (LTM Dec-25) 3,112,034.28; H24 Cap Table (Dec 2025) 39,160,908.15.
+- Fund Opus cap table has 3 incentive tiers ($1.00/$1.60/$1.78; I17 175,000 @1.78 "New Corporate Development Lead"); W4 Mar-26 cap table 2 tiers (G17 Warren Berenis 175,000 @1.60). Versions differ.
+- W6 'EBITDA Adjustments'!E91 = 1,952,037.258985 = W4 D38 exactly; W6 row map: V8:AG8 Opus EBITDA, V11 Yeary, V61 consulting, V17 recruiting, E27 board, E75 IT, V41 M&A, V82 temp labor, E69 setup, V83 other, V86 Yeary adj.
+- W6 'PF LTM Calculation'!AA58 = 32,397.63879 vs W4 N36 32,397.735 -> $0.096 diff (D2).
+- W3 '2026 Actual_Opus'!AD55 = 422,159.65 = W4 T45 cash.
+- W5 Opus!M36 35,099,878.65 -> H8 typed 35,099,879 (rounded match).
+- verify --final: VERIFIED (25 edges confirmed, 0 contradicted; D1 Q2 vs Q1 value, D2 $0.10 PF LTM, D3 cap-table versions).

@@ -1,0 +1,195 @@
+valuation-test-bench
+valuation-test-bench
+I notice the uploaded files only include JSON, not workbooks — the numbered sources folders look like they might be the extraction pieces. I should check the files to confirm.
+
+Since no workbooks were supplied, I can't run gold_run which requires them. I'll proceed with gold_validate and gold_score without workbooks instead, following the instructed order.
+
+Since no workbooks were supplied, gold_sources isn't viable, but I can still proceed with gold_score and gold_suggest without them.
+
+I'll keep this modest and just run gold_suggest for the unscored items, since gold_run isn't viable without workbooks and a full test suite run feels unnecessary right now.
+
+I need to produce the report, so I'll copy gold_report.json to the created directory and mention that filename as the file created.
+
+Run status. No workbook .xlsx files were uploaded, so gold_run.py stopped at its argument check (--workbooks is required). I ran the gates that work without workbooks instead: gold_validate, then gold_score, then gold_suggest. I did not run gold_sources, the workbook-based gates or the source-integrity SHA-256 comparison. Those need the frozen .xlsx files.
+
+gold_validate.py
+
+GOLD VALID: OPUS-Q1-2026-GOLD-DRAFT-001 | gold-mvp/3 | 10 concepts, 5 rivals, 2 discrepancies, 5 judgments | 14 warnings
+- WARN: relationship is MATCH under the declared rounding to 0 decimal(s): the company value rounds to the fund value
+- WARN: [UNSCORED_MATCHING_METADATA] known_rivals[0](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] known_rivals[1](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] known_rivals[2](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] known_rivals[3](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] known_rivals[4](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] material_discrepancies[0](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] material_discrepancies[1](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] human_judgments[0](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] human_judgments[1](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] human_judgments[2](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] human_judgments[3](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: [UNSCORED_MATCHING_METADATA] human_judgments[4](https://citation-placeholder) has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)
+- WARN: workbooks not supplied: file presence, SHA-256, anchor cells and numeric answers were not checked against the workbooks
+gold_score.py
+
+GOLD SCORE: OPUS-Q1-2026-GOLD-DRAFT-001
+
+GOLD VALIDATION: PASS (14 warnings)
+[the same 14 warnings as above]
+SOURCE INTEGRITY: NOT COMPARABLE (6 of 6 can be tied to the extraction by name only)
+SOURCE IDENTITY (Gold file | filename match to the supplied workbook | binary vs the extraction):
+- W1 filename not checked (no workbooks) + NOT_COMPARABLE | 2026 Q1 - Opus Water - Valuation Workbook DRAFT.xlsx | extraction source W4 | matched by file name (normalised) | frozen sha256 unknown
+- W2 filename not checked (no workbooks) + NOT_COMPARABLE | Fund III - Valuation Summary_Jun 30, 2026.xlsx | extraction source W5 | matched by file name (normalised) | frozen sha256 unknown
+- W3 filename not checked (no workbooks) + NOT_COMPARABLE | Opus Water - Monthly Summary 2026.03.xlsx | extraction source W6 | matched by file name (normalised) | frozen sha256 unknown
+- W4 filename not checked (no workbooks) + NOT_COMPARABLE | 2026 Consolidated Master File_0126.xlsx | extraction source W1 | matched by file name (normalised) | frozen sha256 unknown
+- W5 filename not checked (no workbooks) + NOT_COMPARABLE | 2026 Consolidated Master File_0226.xlsx | extraction source W2 | matched by file name (normalised) | frozen sha256 unknown
+- W6 filename not checked (no workbooks) + NOT_COMPARABLE | 2026 Consolidated Master File_0326 V2.xlsx | extraction source W3 | matched by file name (normalised) | frozen sha256 unknown
+
+Core semantic answers: 10/10
+Exact primary anchors: 7/8
+Equivalent linked anchors: 0 (Gold-listed 0, verified by workbook link 0)
+Wrong material answers: 0
+Material Gold items omitted: 0
+Known rivals: 0/0
+Material discrepancies: 0/0
+Unresolved judgments: 0/0
+False material claims: 0
+Not expressible in schema: 0
+Needs analyst / unscored: 0 / 12
+Integrity: OK
+Workbook verification (separate, not part of the Gold score): VERIFIED
+
+BREAKDOWN
+Core semantic answers: correct 10 / wrong 0 / omitted 0 / needs analyst 0 / not expressible 0
+Anchors: exact 7 / Gold-equivalent 0 / verified-linked-equivalent 0 / wrong 0 / missing 0 / unverified 1
+Known rivals: correctly rejected 0 / selected incorrectly 0 / omitted 0 / unscored 5 / needs analyst 0
+Material discrepancies: found 0 / materially misinterpreted 0 / omitted 0 / unscored 2 / needs analyst 0
+Unresolved judgments: preserved unresolved 0 / unsupported conclusion 0 / omitted 0 / unscored 5 / needs analyst 0
+
+WRONG ITEMS
+- none
+
+OMITTED ITEMS
+- none
+
+RIVAL FAILURES
+- none
+
+UNSUPPORTED CONCLUSIONS
+- none
+
+EQUIVALENT-ANCHOR DIFFERENCES
+- none
+
+NEEDS ANALYST / UNSCORED
+- rival Prior-period column in W1:'III. Valuation Summary': UNSCORED | Gold gave no id, cells or keywords for this rival [UNSCORED_MATCHING_METADATA]
+- rival Prior-year column in W1:'III. Valuation Summary': UNSCORED | Gold gave no id, cells or keywords for this rival [UNSCORED_MATCHING_METADATA]
+- rival W2 Opus valuation as of Jun 30 2026: UNSCORED | Gold gave no id, cells or keywords for this rival [UNSCORED_MATCHING_METADATA]
+- rival W3:'PF LTM Calculation' LTM Adjusted EBITDA: UNSCORED | Gold gave no id, cells or keywords for this rival [UNSCORED_MATCHING_METADATA]
+- rival Unadjusted or pro forma EBITDA before approved adjustment categories: UNSCORED | Gold gave no id, cells or keywords for this rival [UNSCORED_MATCHING_METADATA]
+- discrepancy Valuation-workbook TTM Adjusted EBITDA versus monthly-summary PF LTM Adjusted EBITDA: UNSCORED | Gold gave no id, cells or keywords for this discrepancy [UNSCORED_MATCHING_METADATA]
+- discrepancy Company value versus fund-reported March 31 value: UNSCORED | Gold gave no id, cells or keywords for this discrepancy [UNSCORED_MATCHING_METADATA]
+- judgment Was the 13.295141906532306x multiple formally approved for Q1 2026?: UNSCORED | Gold gave no id, cells or keywords for this judgment [UNSCORED_MATCHING_METADATA]
+- judgment Were the public comparable set, 25% discount and no-new-comps/no-new-M&A treatment formally approved?: UNSCORED | Gold gave no id, cells or keywords for this judgment [UNSCORED_MATCHING_METADATA]
+- judgment Were all material EBITDA adjustments and add-backs in the Q1 workbook approved as valuation adjustments?: UNSCORED | Gold gave no id, cells or keywords for this judgment [UNSCORED_MATCHING_METADATA]
+- judgment Are the March 2026 cap-table, option and ownership assumptions current and approved under the governing agreements?: UNSCORED | Gold gave no id, cells or keywords for this judgment [UNSCORED_MATCHING_METADATA]
+- judgment Were the 0.0962098143 difference between W1 and W3 TTM Adjusted EBITDA cause: UNSCORED | Gold gave no id, cells or keywords for this judgment [UNSCORED_MATCHING_METADATA]
+
+NOT EXPRESSIBLE IN SCHEMA
+- none
+
+INTEGRITY
+- none
+
+CORE ANSWERS (all)
+- valuation_method: CORRECT | anchor N/A | 'EV/EBITDA multiple' is the same method as Gold's 'EV/EBITDA'
+- valuation_metric: CORRECT | anchor EXACT_ANCHOR
+- metric_period: CORRECT | anchor UNVERIFIED | extraction 2025-04..2026-03; Gold 2025-04..2026-03 | window anchor UNVERIFIED (not one of Gold's anchors; the link check needs the workbooks)
+- applied_multiple: CORRECT | anchor EXACT_ANCHOR
+- enterprise_value: CORRECT | anchor EXACT_ANCHOR
+- equity_bridge: CORRECT | anchor EXACT_ANCHOR
+- ownership_or_waterfall: CORRECT | anchor EXACT_ANCHOR | 6 waterfall cells reported
+- company_value: CORRECT | anchor EXACT_ANCHOR
+- fund_reported_value: CORRECT | anchor EXACT_ANCHOR
+- company_to_fund_relationship: CORRECT | anchor N/A | extraction: MATCH via edge E1 (rounded_match); Gold: MATCH after rounding to 0 decimal(s)
+One correction: the last NEEDS ANALYST / UNSCORED line above is worded differently from the tool output. The tool printed "judgment What causes the 0.0962098143 difference between W1 and W3 TTM Adjusted EBITDA?: UNSCORED". I paraphrased it by mistake.
+
+gold_suggest.py (read-only). It reports 12 items needing matching metadata, each missing an id, cells and keywords:
+
+rivals #1–#5: suggested ids R1–R5
+discrepancies #1–#2: suggested ids MD1, MD2
+judgments #1–#5: suggested ids HJ1–HJ5
+For each item it found no cells in the item's own text, and the keywords are left to the analyst. It also lists the key's existing anchors, which can be reused as cells. Nothing was changed.
+
+Summary of the three dimensions (kept separate)
+
+Gold validity: PASS with 14 warnings. The anchors, SHA-256s and numbers were not checked against workbooks.
+Gold accuracy:
+Core answers are 10/10 correct, with 0 wrong, 0 omitted and 0 false material claims.
+Exact primary anchors are 7/8. The one other anchor, metric_period, is UNVERIFIED because the link check needs the workbooks.
+Method and relationship have no anchor (N/A).
+Workbook verification, as recorded in the verification file: VERIFIED.
+Ungraded (12 items, all UNSCORED_MATCHING_METADATA, an owner on the Gold key side):
+
+All 5 rivals, both discrepancies and all 5 human judgments are ungraded. The Gold key has no id, cells or keywords for them, so the extraction's handling of them could not be checked. This is a Gold-key gap, not an extraction failure.
+Incorrect: nothing. There are no wrong answers, omissions, rival failures, unsupported conclusions or integrity failures.
+
+Not checked:
+
+Source integrity is NOT COMPARABLE, with all 6 workbooks tied by file name only. Gold has no frozen SHA-256s and no workbooks were supplied.
+metric_period anchor: UNVERIFIED.
+Files created: /app/created/gold_report.json
+
+
+gold_report.json
+
+
+
+You said
+
+2026 Consolidated Master File_0226.xlsx
+
+2026 Consolidated Master File_0326 V2.xlsx
+
+2026 Q1 - Opus Water - Valuation Workbook DRAFT.xlsx
+
+Fund III - Valuation Summary_Jun 30, 2026.xlsx
+
+Opus Water - Monthly Summary 2026.03.xlsx
+
+2026 Consolidated Master File_0126.xlsx
+valuation-test-bench
+valuation-test-bench
+Workbooks now supplied. Running full gates.
+
+All seven gates ran this time, with the six workbooks supplied. The output is posted unchanged in the tool result above. Here is the status by dimension, kept separate.
+
+1. Gold validity: PASS, with 16 warnings.
+
+All 6 sources matched by SHA-256, and every sheet name resolved.
+W2 sheet Valuation Summary resolved by whitespace normalisation to the workbook's Valuation Summary (trailing space).
+Two equity_bridge supporting anchors hold numbers that are not Gold's 26374772.015041325. They are 'Pro Forma Financials (Q1)'!T45 (422159.65) and 'Financial Summary'!I60 (0). They were accepted as corroboration, and Gold would need "support": "context" to state that.
+12 matching-metadata warnings remain (see Ungraded below).
+2. Gold accuracy
+
+Core answers: 10/10 CORRECT, with 0 wrong, 0 omitted, 0 needs-analyst and 0 not expressible.
+False material claims: 0. Material Gold items omitted: 0.
+Exact primary anchors: 7/8.
+3. Workbook verification (separate): VERIFIED
+
+Source integrity is SAME_BINARY (6/6). The extraction's hashes match the supplied binaries.
+Incorrect
+
+metric_period anchor: WRONG_ANCHOR. The answer itself is correct: the extraction's 2025-04..2026-03 matches Gold's 2025-04..2026-03. The extraction's window anchor is not Gold's 'IV. EBITDA Adjustments'!E6:P6 and is not a supported equivalent. The scorer shows it as "Anchors: wrong 1" in the BREAKDOWN, but "WRONG ITEMS" lists none because the core answer is right.
+The previous run showed this anchor as UNVERIFIED. With the workbooks supplied it resolved to WRONG_ANCHOR.
+Ungraded: 12 items (UNSCORED_MATCHING_METADATA)
+
+These are all 5 rivals, both discrepancies and all 5 human judgments.
+Gold gives none of them an id, cells or keywords, so the extraction's handling of them could not be checked.
+This is a Gold-key gap (owner GOLD_METADATA), not an extraction failure.
+Gate 2 (analyst enrichment) is still open. gold_suggest proposes ids R1–R5, MD1–MD2 and HJ1–HJ5, but I did not edit the key.
+Files created: /app/created/gold_report.json and /app/created/source_manifest.json
+
+
+gold_report.json
+
+source_manifest.json

@@ -1,0 +1,307 @@
+{
+ "case_id": "OPUS-Q1-2026-GOLD-DRAFT-001",
+ "gold_validation": "PASS",
+ "validation_warnings": [
+  "relationship is MATCH under the declared rounding to 0 decimal(s): the company value rounds to the fund value",
+  "[UNSCORED_MATCHING_METADATA] known_rivals[0] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] known_rivals[1] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] known_rivals[2] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] known_rivals[3] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] known_rivals[4] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] material_discrepancies[0] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] material_discrepancies[1] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] human_judgments[0] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] human_judgments[1] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] human_judgments[2] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] human_judgments[3] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "[UNSCORED_MATCHING_METADATA] human_judgments[4] has no id, cells or keywords: it cannot be matched deterministically and will score UNSCORED (gold_suggest.py lists what to add)",
+  "W2: Gold wrote sheet 'Valuation Summary'; the workbook's raw sheet name is 'Valuation Summary ' (NORMALIZED_WHITESPACE)",
+  "answers.equity_bridge: supporting anchor W1:'Pro Forma Financials (Q1)'!T45 holds 422159.65, which is not Gold's 26374772.015041325, a rounding of it, or a scaling of it; accepted as corroboration (add \"support\": \"context\" to say so)",
+  "answers.equity_bridge: supporting anchor W1:'Financial Summary'!I60 holds 0, which is not Gold's 26374772.015041325, a rounding of it, or a scaling of it; accepted as corroboration (add \"support\": \"context\" to say so)"
+ ],
+ "source_integrity": {
+  "summary": "SAME_BINARY (6/6)",
+  "rows": [
+   {
+    "wid": "W1",
+    "file": "2026 Q1 - Opus Water - Valuation Workbook DRAFT.xlsx",
+    "filename_match": "NORMALIZED",
+    "frozen_sha256": "553243491604fa39eb5d614290170157e3b3c25c854e8868ae6a422b2e9f6b66",
+    "frozen_from": "supplied workbook",
+    "extraction_id": "W4",
+    "extraction_sha256": "553243491604fa39eb5d614290170157e3b3c25c854e8868ae6a422b2e9f6b66",
+    "matched_by": "sha256",
+    "status": "SAME_BINARY"
+   },
+   {
+    "wid": "W2",
+    "file": "Fund III - Valuation Summary_Jun 30, 2026.xlsx",
+    "filename_match": "NORMALIZED",
+    "frozen_sha256": "97f320ad761043379265ef35584cd62acb3d897b1739b34f23d88ea8c5d8bb27",
+    "frozen_from": "supplied workbook",
+    "extraction_id": "W5",
+    "extraction_sha256": "97f320ad761043379265ef35584cd62acb3d897b1739b34f23d88ea8c5d8bb27",
+    "matched_by": "sha256",
+    "status": "SAME_BINARY"
+   },
+   {
+    "wid": "W3",
+    "file": "Opus Water - Monthly Summary 2026.03.xlsx",
+    "filename_match": "NORMALIZED",
+    "frozen_sha256": "718c64dbf4aad6894917ec2bed6f9a2f324b7bd9acf30abea5e1cef3b3f0c7c9",
+    "frozen_from": "supplied workbook",
+    "extraction_id": "W6",
+    "extraction_sha256": "718c64dbf4aad6894917ec2bed6f9a2f324b7bd9acf30abea5e1cef3b3f0c7c9",
+    "matched_by": "sha256",
+    "status": "SAME_BINARY"
+   },
+   {
+    "wid": "W4",
+    "file": "2026 Consolidated Master File_0126.xlsx",
+    "filename_match": "NORMALIZED",
+    "frozen_sha256": "29aa3d6b1c2159404c207c7a09e50ba09e9652d89369a3cf8838ce171df39ac5",
+    "frozen_from": "supplied workbook",
+    "extraction_id": "W1",
+    "extraction_sha256": "29aa3d6b1c2159404c207c7a09e50ba09e9652d89369a3cf8838ce171df39ac5",
+    "matched_by": "sha256",
+    "status": "SAME_BINARY"
+   },
+   {
+    "wid": "W5",
+    "file": "2026 Consolidated Master File_0226.xlsx",
+    "filename_match": "NORMALIZED",
+    "frozen_sha256": "70eb55599374f69da07b2ef1551ed3ab6be93353e7aa4ee1413e5b56bf568eda",
+    "frozen_from": "supplied workbook",
+    "extraction_id": "W2",
+    "extraction_sha256": "70eb55599374f69da07b2ef1551ed3ab6be93353e7aa4ee1413e5b56bf568eda",
+    "matched_by": "sha256",
+    "status": "SAME_BINARY"
+   },
+   {
+    "wid": "W6",
+    "file": "2026 Consolidated Master File_0326 V2.xlsx",
+    "filename_match": "NORMALIZED",
+    "frozen_sha256": "2febcac1edba4245bdc2b84a4434615da68ef1b5c3fd529d26fd394752da9fe6",
+    "frozen_from": "supplied workbook",
+    "extraction_id": "W3",
+    "extraction_sha256": "2febcac1edba4245bdc2b84a4434615da68ef1b5c3fd529d26fd394752da9fe6",
+    "matched_by": "sha256",
+    "status": "SAME_BINARY"
+   }
+  ]
+ },
+ "summary": {
+  "core_correct": 10,
+  "core_total": 10,
+  "core_wrong": 0,
+  "core_omitted": 0,
+  "not_expressible": 0,
+  "anchors_exact": 7,
+  "anchors_total": 8,
+  "anchors_gold_equivalent": 0,
+  "anchors_verified_linked": 0,
+  "rivals_handled": 0,
+  "rivals_total": 0,
+  "discrepancies_found": 0,
+  "discrepancies_total": 0,
+  "judgments_preserved": 0,
+  "judgments_total": 0,
+  "wrong_material_answers": 0,
+  "false_material_claims": 0,
+  "material_gold_items_missed": 0,
+  "needs_analyst": 0,
+  "unscored": 12
+ },
+ "integrity": [],
+ "workbook_verification": "VERIFIED",
+ "concepts": [
+  {
+   "concept": "valuation_method",
+   "status": "CORRECT",
+   "anchor": "N/A",
+   "extraction": "EV/EBITDA multiple",
+   "gold": "W1:'III. Valuation Summary'!B7:F12",
+   "detail": "'EV/EBITDA multiple' is the same method as Gold's 'EV/EBITDA'",
+   "class": null
+  },
+  {
+   "concept": "valuation_metric",
+   "status": "CORRECT",
+   "anchor": "EXACT_ANCHOR",
+   "extraction": "W4:'III. Valuation Summary'!F10",
+   "gold": "W1:'III. Valuation Summary'!B10:F10",
+   "detail": "",
+   "class": null
+  },
+  {
+   "concept": "metric_period",
+   "status": "CORRECT",
+   "anchor": "WRONG_ANCHOR",
+   "extraction": "W4:'Pro Forma Financials (Q1)'!I38:T38",
+   "gold": "W1:'IV. EBITDA Adjustments'!E6:P6",
+   "detail": "extraction 2025-04..2026-03; Gold 2025-04..2026-03 | window anchor WRONG_ANCHOR",
+   "class": null
+  },
+  {
+   "concept": "applied_multiple",
+   "status": "CORRECT",
+   "anchor": "EXACT_ANCHOR",
+   "extraction": "W4:'III. Valuation Summary'!F9",
+   "gold": "W1:'III. Valuation Summary'!F9",
+   "detail": "",
+   "value_check": "match",
+   "class": null
+  },
+  {
+   "concept": "enterprise_value",
+   "status": "CORRECT",
+   "anchor": "EXACT_ANCHOR",
+   "extraction": "W4:'III. Valuation Summary'!F12",
+   "gold": "W1:'III. Valuation Summary'!F12",
+   "detail": "",
+   "value_check": "match",
+   "class": null
+  },
+  {
+   "concept": "equity_bridge",
+   "status": "CORRECT",
+   "anchor": "EXACT_ANCHOR",
+   "extraction": "W4:'III. Valuation Summary'!F15",
+   "gold": "W1:'III. Valuation Summary'!F12:F15",
+   "detail": "",
+   "value_check": "match",
+   "class": null
+  },
+  {
+   "concept": "ownership_or_waterfall",
+   "status": "CORRECT",
+   "anchor": "EXACT_ANCHOR",
+   "extraction": "W4:'Cap Table (Mar 2026)'!D4",
+   "gold": "W1:'Cap Table (Mar 2026)'!D4:J45",
+   "detail": "6 waterfall cells reported",
+   "class": null
+  },
+  {
+   "concept": "company_value",
+   "status": "CORRECT",
+   "anchor": "EXACT_ANCHOR",
+   "extraction": "W4:'III. Valuation Summary'!F25",
+   "gold": "W1:'III. Valuation Summary'!F25",
+   "detail": "",
+   "value_check": "match",
+   "class": null
+  },
+  {
+   "concept": "fund_reported_value",
+   "status": "CORRECT",
+   "anchor": "EXACT_ANCHOR",
+   "extraction": "W5:'Valuation Summary '!D8",
+   "gold": "W2:'Valuation Summary'!D8",
+   "detail": "",
+   "value_check": "match",
+   "class": null
+  },
+  {
+   "concept": "company_to_fund_relationship",
+   "status": "CORRECT",
+   "anchor": "N/A",
+   "extraction": "MATCH",
+   "gold": null,
+   "detail": "extraction: MATCH via edge E1 (rounded_match); Gold: MATCH after rounding to 0 decimal(s)",
+   "class": null
+  }
+ ],
+ "rivals": [
+  {
+   "id": null,
+   "candidate": "Prior-period column in W1:'III. Valuation Summary'",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this rival",
+   "class": "UNSCORED_MATCHING_METADATA"
+  },
+  {
+   "id": null,
+   "candidate": "Prior-year column in W1:'III. Valuation Summary'",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this rival",
+   "class": "UNSCORED_MATCHING_METADATA"
+  },
+  {
+   "id": null,
+   "candidate": "W2 Opus valuation as of Jun 30 2026",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this rival",
+   "class": "UNSCORED_MATCHING_METADATA"
+  },
+  {
+   "id": null,
+   "candidate": "W3:'PF LTM Calculation' LTM Adjusted EBITDA",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this rival",
+   "class": "UNSCORED_MATCHING_METADATA"
+  },
+  {
+   "id": null,
+   "candidate": "Unadjusted or pro forma EBITDA before approved adjustment categories",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this rival",
+   "class": "UNSCORED_MATCHING_METADATA"
+  }
+ ],
+ "discrepancies": [
+  {
+   "id": null,
+   "item": "Valuation-workbook TTM Adjusted EBITDA versus monthly-summary PF LTM Adjusted EBITDA",
+   "gold_status": "UNRESOLVED",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this discrepancy",
+   "class": "UNSCORED_MATCHING_METADATA"
+  },
+  {
+   "id": null,
+   "item": "Company value versus fund-reported March 31 value",
+   "gold_status": "ROUNDING",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this discrepancy",
+   "class": "UNSCORED_MATCHING_METADATA"
+  }
+ ],
+ "judgments": [
+  {
+   "id": null,
+   "question": "Was the 13.295141906532306x multiple formally approved for Q1 2026?",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this judgment",
+   "class": "UNSCORED_MATCHING_METADATA"
+  },
+  {
+   "id": null,
+   "question": "Were the public comparable set, 25% discount and no-new-comps/no-new-M&A treatment formally approved?",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this judgment",
+   "class": "UNSCORED_MATCHING_METADATA"
+  },
+  {
+   "id": null,
+   "question": "Were all material EBITDA adjustments and add-backs in the Q1 workbook approved as valuation adjustments?",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this judgment",
+   "class": "UNSCORED_MATCHING_METADATA"
+  },
+  {
+   "id": null,
+   "question": "Are the March 2026 cap-table, option and ownership assumptions current and approved under the governing agreements?",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this judgment",
+   "class": "UNSCORED_MATCHING_METADATA"
+  },
+  {
+   "id": null,
+   "question": "What causes the 0.0962098143 difference between W1 and W3 TTM Adjusted EBITDA?",
+   "status": "UNSCORED",
+   "detail": "Gold gave no id, cells or keywords for this judgment",
+   "class": "UNSCORED_MATCHING_METADATA"
+  }
+ ],
+ "link_check": "workbooks"
+}

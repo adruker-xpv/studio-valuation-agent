@@ -1,0 +1,51 @@
+﻿build 13.2.6: onboarding validated end to end (review -> memory -> hand-off -> reuse)
+
+Onboarding now runs from extraction through review, company memory and the
+generation hand-off. Proven on Opus Q1 2026. Next phase is quarterly workbook
+generation (Phase 6).
+
+What the build does
+- Extraction runs in two passes, 8 stages in total
+  (ONBOARDING EXTRACTION, then ONBOARDING RESUME).
+- review_xlsx 13.2.6 builds the review workbook with 3 decision sheets.
+  Unresolved decisions accept only Correct or Reject.
+- The review reader checks the bundle fingerprint, snapshot match, allowed
+  answers and correction types. Any invalid row refuses the whole review and
+  nothing is written.
+- memory.py creates or extends company memory: entries are only added, with a
+  hash chain and a coherence check. Blank answers are kept as pending,
+  conflicting answers are STOPPED, and confirmed answers are saved as
+  assumptions for that period.
+- The hand-off builder writes 6.generation_handoff/... with status
+  ready / ready_with_unresolved.
+- Repeat runs reconcile against memory by concept and report reused /
+  pending / reopened / new. Confirmed items are not asked again.
+
+Validation (Opus Q1 2026)
+- r6 review: refused twice (Approve used on unresolved decisions), accepted on
+  the 3rd attempt. 23 approved / 4 corrected / 0 rejected / 2 undecided.
+  Memory created with 15 entries, coherence OK.
+  Hand-off ready_with_unresolved (1 pending: add-backs).
+- r7 fresh run with memory: VERIFIED, 0 contradicted. 14 reused, 1 pending
+  carried, 0 reopened, 1 new decision (LP report ownership link).
+  Memory caught a copy-vs-source mapping (F25 -> J35) and the AI fixed it.
+- Chain reproduced: EV $25,952,612.37 -> equity $26,374,772.02 -> XPV
+  $24,723,978.88 -> Fund III $24,723,979. One immaterial $0.10 LTM rounding
+  difference.
+- Wrong let through: 0.
+
+Known issues (not fixed here; Phase 6 entry items)
+- Memory is attached at stage 6 instead of before stage 1, so stage 3 had to
+  be revised after stage 8.
+- A proposal can be dropped as 'unclear' without being flagged
+  (13 proposals in r6 -> 12 in r7).
+- Uploads are improvised: base64 printing, memory retyped from context,
+  checkpoint uploads deferred.
+- Harness mechanics still show in user-facing replies.
+
+Docs
+- Build Plan Draft 4, System Spec Draft 2 (review rules, memory rules,
+  hand-off section 9, run hygiene section 10), Log (Q-22..24, D-13..16,
+  r6/r7 runs), AI Development Log (strengths/weaknesses + 6 events),
+  Run Guide (replaces the OceanSight E2E test).
+- Archived: Onboarding Expansion/Polish Phase, ONBOARDING_END_TO_END_TEST.
